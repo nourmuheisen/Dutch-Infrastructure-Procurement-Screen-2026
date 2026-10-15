@@ -1,0 +1,17 @@
+{
+  "_note": "Adjustable. Capability weights must sum to 1. Priority modifiers (0-1) set how far timing and evidence confidence can scale relevance down: 0.4 means a project with the weakest timing keeps 60% of its relevance.",
+  "capability_weights": {
+    "investment_planning": 0.25,
+    "procurement_commercial": 0.25,
+    "controls_assurance": 0.25,
+    "asset_lifecycle": 0.25
+  },
+  "priority_modifiers": {
+    "timing": 0.4,
+    "confidence": 0.3
+  },
+  "shortlist": {
+    "size": 18,
+    "min_confidence": 2.5
+  }
+}

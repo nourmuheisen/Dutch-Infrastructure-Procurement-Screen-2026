@@ -1,0 +1,837 @@
+<title>Dutch Infrastructure Procurement Screen 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="A screen of 183 Dutch infrastructure procurements from 2026 for the problems capital-projects advisers work on.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout concept: a set of engineering sheets. Each section is a drawing sheet whose title
+   block states its source and count; the map is the master drawing; scores read as gauge staffs. */
+:root{
+  --paper:#F3F6F5;      /* polder fog */
+  --sheet:#FFFFFF;
+  --ink:#10242C;        /* deep slate */
+  --ink-2:#51666D;
+  --rule:#CBD6D4;
+  --rule-2:#E2E9E7;
+  --water:#1B6773;      /* accent: channel water */
+  --water-soft:#D5E7E8;
+  --signal:#EDB100;     /* road-works marking yellow, for the shortlist */
+  --signal-ink:#10242C;
+  --open:#C98A00;  --tender:#1B6773;  --done:#6E7F84;  --stop:#A8432C;
+  --ramp-0:#E5EEED; --ramp-1:#B9D6D7; --ramp-2:#7FB3B8; --ramp-3:#3F8790; --ramp-4:#17545E;
+  --f-display:"Barlow Condensed","Arial Narrow","Roboto Condensed",sans-serif;
+  --f-body:"Barlow","Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --step--1:.8125rem; --step-0:1rem; --step-1:1.1875rem; --step-2:1.5rem; --step-3:2.125rem; --step-4:3.25rem;
+  --wrap:1180px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0C171B; --sheet:#111F24; --ink:#E2EBE9; --ink-2:#93A7AB; --rule:#2B3E44; --rule-2:#1C2D33;
+  --water:#5DB7C2; --water-soft:#173A40; --signal:#F2C230; --signal-ink:#0C171B;
+  --open:#E2A93A; --tender:#5DB7C2; --done:#7F9297; --stop:#D9735B;
+  --ramp-0:#16272C; --ramp-1:#1F4A50; --ramp-2:#2D6F77; --ramp-3:#4B9AA3; --ramp-4:#8CCBD2;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0C171B; --sheet:#111F24; --ink:#E2EBE9; --ink-2:#93A7AB; --rule:#2B3E44; --rule-2:#1C2D33;
+  --water:#5DB7C2; --water-soft:#173A40; --signal:#F2C230; --signal-ink:#0C171B;
+  --open:#E2A93A; --tender:#5DB7C2; --done:#7F9297; --stop:#D9735B;
+  --ramp-0:#16272C; --ramp-1:#1F4A50; --ramp-2:#2D6F77; --ramp-3:#4B9AA3; --ramp-4:#8CCBD2;
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:var(--step-0);line-height:1.55;margin:0;-webkit-font-smoothing:antialiased}
+a{color:var(--water);text-underline-offset:2px}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;line-height:1.05;text-wrap:balance;margin:0;letter-spacing:.005em}
+p{margin:0}
+.mono{font-family:var(--f-mono);font-size:var(--step--1);font-variant-numeric:tabular-nums}
+.num{font-variant-numeric:tabular-nums}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+:focus-visible{outline:2px solid var(--water);outline-offset:2px}
+button{font:inherit;color:inherit}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
+.bar .wrap{display:flex;align-items:center;gap:20px;min-height:52px;flex-wrap:wrap}
+.brand{font-family:var(--f-display);font-weight:700;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px}
+.brand i{display:inline-block;width:18px;height:18px;background:repeating-linear-gradient(-45deg,var(--signal) 0 4px,var(--ink) 4px 8px);border-radius:2px}
+.nav{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto}
+.nav a{font-family:var(--f-display);font-weight:500;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--ink-2);padding:6px 10px;border-radius:3px}
+.nav a:hover{color:var(--ink);background:var(--rule-2)}
+@media (max-width:640px){.nav{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:6px}.nav a{padding:4px 8px;font-size:.9rem;white-space:nowrap}}
+
+/* sheet = section */
+.sheet{padding-block:56px 64px;border-bottom:1px solid var(--rule)}
+.block{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 24px;align-items:end;border-top:2px solid var(--ink);padding-top:10px;margin-bottom:28px}
+.block h2{font-size:var(--step-3)}
+.block .code{font-family:var(--f-mono);font-size:var(--step--1);color:var(--ink-2);text-align:right;line-height:1.4}
+.block .code b{color:var(--ink);font-weight:500}
+.lede{max-width:66ch;color:var(--ink-2);font-size:var(--step-1);margin-bottom:28px}
+@media (max-width:640px){.block{grid-template-columns:1fr}.block .code{text-align:left}}
+
+/* hero */
+.hero{padding-block:56px 40px}
+.hero .eyebrow{font-family:var(--f-mono);font-size:var(--step--1);color:var(--ink-2);letter-spacing:.04em;margin-bottom:18px}
+.hero h1{font-size:clamp(2.4rem,6.2vw,5.25rem);font-weight:700;text-transform:uppercase;letter-spacing:-.005em;line-height:.9}
+.hero h1 span{color:var(--water);display:block}
+.hero .intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;margin-top:28px;align-items:start}
+.hero .intro p{font-size:var(--step-1);max-width:58ch}
+.hero .intro p + p{margin-top:12px;color:var(--ink-2);font-size:var(--step-0)}
+.caps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--rule)}
+.caps div{padding:12px 12px 12px 0;border-bottom:1px solid var(--rule)}
+.caps div:nth-child(odd){border-right:1px solid var(--rule)}
+.caps div:nth-child(even){padding-left:14px}
+.caps b{display:block;font-family:var(--f-display);font-weight:600;font-size:1.125rem;letter-spacing:.02em}
+.caps span{font-size:var(--step--1);color:var(--ink-2)}
+@media (max-width:820px){.hero .intro{grid-template-columns:1fr;gap:24px}}
+
+/* longitudinal profile (funnel) */
+.profile{margin-top:40px}
+.profile svg{width:100%;height:auto;display:block}
+.profile .cap{font-family:var(--f-mono);font-size:var(--step--1);color:var(--ink-2);margin-top:8px}
+
+/* findings */
+.findings{display:grid;gap:28px}
+.finding{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:32px;padding:28px 0;border-top:1px solid var(--rule)}
+.finding:first-child{border-top:0;padding-top:0}
+.finding .n{font-family:var(--f-mono);font-size:var(--step--1);color:var(--water);margin-bottom:8px;letter-spacing:.06em}
+.finding h3{font-size:var(--step-2);margin-bottom:12px}
+.finding p{color:var(--ink-2);max-width:56ch}
+.finding p + p{margin-top:10px}
+.finding figure{margin:0;min-width:0}
+.finding figcaption{font-family:var(--f-mono);font-size:var(--step--1);color:var(--ink-2);margin-top:8px}
+.chart{width:100%;height:auto;display:block;overflow:visible}
+.chart text{fill:var(--ink);font-family:var(--f-body);font-size:12px}
+.chart .muted{fill:var(--ink-2)}
+.chart .mono{font-family:var(--f-mono);font-size:11px}
+@media (max-width:820px){.finding{grid-template-columns:1fr;gap:16px}}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:var(--step--1);color:var(--ink-2);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.02em;padding:2px 7px;border-radius:999px;border:1px solid currentColor;white-space:nowrap;line-height:1.4}
+.chip::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.st-open{color:var(--open)} .st-tender{color:var(--tender)} .st-done{color:var(--done)} .st-stop{color:var(--stop)}
+.stab{font-family:var(--f-mono);font-size:.75rem;padding:1px 6px;border-radius:3px;background:var(--rule-2);color:var(--ink-2);white-space:nowrap}
+.stab.s7{background:var(--signal);color:var(--signal-ink)}
+
+/* shortlist */
+.slist{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.slist li{display:grid;grid-template-columns:3.2rem minmax(0,1fr) auto;gap:6px 18px;padding:16px 0;border-bottom:1px solid var(--rule);align-items:start}
+.slist .rk{font-family:var(--f-display);font-weight:700;font-size:2rem;line-height:1;color:var(--ink);position:relative}
+.slist .rk::after{content:"";position:absolute;left:0;bottom:-6px;width:22px;height:4px;background:var(--signal)}
+.slist h3{font-size:1.375rem}
+.slist .meta{display:flex;gap:8px 14px;flex-wrap:wrap;align-items:center;font-size:var(--step--1);color:var(--ink-2);margin:6px 0 8px}
+.slist p{max-width:72ch;font-size:.95rem}
+.slist .side{display:grid;justify-items:end;gap:8px;text-align:right}
+.slist .val{font-family:var(--f-mono);font-size:var(--step--1);color:var(--ink-2)}
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--ink);background:transparent;border-radius:3px;padding:5px 11px;font-family:var(--f-display);font-weight:600;letter-spacing:.05em;text-transform:uppercase;font-size:.9rem;cursor:pointer}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.small{padding:3px 8px;font-size:.8rem}
+@media (max-width:640px){.slist li{grid-template-columns:2.4rem minmax(0,1fr)}.slist .side{grid-column:2;justify-items:start;text-align:left;grid-auto-flow:column;align-items:center}}
+
+/* explorer */
+.explorer{display:grid;grid-template-columns:280px minmax(0,1fr);gap:28px;align-items:start}
+.controls{position:sticky;top:72px;background:var(--sheet);border:1px solid var(--rule);border-radius:4px;padding:16px;display:grid;gap:18px}
+.controls h4{font-family:var(--f-display);font-size:.95rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:0 0 8px;color:var(--ink-2)}
+.presets{display:flex;flex-wrap:wrap;gap:6px}
+.presets button{border:1px solid var(--rule);background:var(--paper);border-radius:3px;padding:3px 8px;font-size:.8rem;cursor:pointer;text-align:left}
+.presets button[aria-pressed="true"]{border-color:var(--water);background:var(--water-soft);color:var(--ink)}
+.slider{display:grid;grid-template-columns:minmax(0,1fr) 3.2rem;gap:2px 10px;align-items:center;font-size:.875rem}
+.slider + .slider{margin-top:10px}
+.slider output{font-family:var(--f-mono);font-size:.8rem;text-align:right;color:var(--ink-2)}
+.slider input{grid-column:1 / -1;width:100%;accent-color:var(--water)}
+.field{display:grid;gap:4px;font-size:.875rem}
+.field + .field{margin-top:10px}
+.field select,.field input[type=search]{font:inherit;font-size:.875rem;padding:6px 8px;border:1px solid var(--rule);border-radius:3px;background:var(--paper);color:var(--ink);width:100%}
+.toggle{display:flex;align-items:center;gap:8px;font-size:.875rem;cursor:pointer}
+.toggle input{accent-color:var(--water);width:16px;height:16px}
+@media (max-width:900px){.explorer{grid-template-columns:1fr}.controls{position:static}}
+.tablewrap{overflow-x:auto;border:1px solid var(--rule);border-radius:4px;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;font-size:.875rem}
+th{font-family:var(--f-display);font-weight:600;font-size:.82rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2);text-align:left;padding:10px 10px;border-bottom:1px solid var(--rule);white-space:nowrap;background:var(--sheet);position:sticky;top:0}
+td{padding:9px 10px;border-bottom:1px solid var(--rule-2);vertical-align:top}
+tbody tr{cursor:pointer}
+tbody tr:hover td{background:var(--rule-2)}
+tr.top td:first-child{box-shadow:inset 4px 0 0 var(--signal)}
+td.rk{font-family:var(--f-mono);font-size:.8rem;white-space:nowrap}
+.delta{font-family:var(--f-mono);font-size:.72rem;margin-left:4px}
+.up{color:var(--water)} .down{color:var(--stop)}
+td .t{font-weight:500;line-height:1.3;max-width:42ch}
+td .a{font-size:.8rem;color:var(--ink-2);margin-top:2px}
+.sc{display:grid;grid-template-columns:repeat(4,14px);gap:3px;align-items:end;height:26px}
+.sc i{display:block;background:var(--water);border-radius:1px 1px 0 0}
+.sc i.r{background:var(--ink-2);opacity:.45}
+.pbar{display:flex;align-items:center;gap:8px;min-width:120px}
+.pbar span{flex:1;height:6px;background:var(--rule-2);border-radius:3px;overflow:hidden}
+.pbar span i{display:block;height:100%;background:var(--ink)}
+tr.top .pbar span i{background:var(--signal)}
+.tabletools{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px;font-size:var(--step--1);color:var(--ink-2)}
+.more{margin-top:12px}
+
+/* map */
+.mapgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px;align-items:start}
+.mapbox{background:var(--sheet);border:1px solid var(--rule);border-radius:4px;padding:12px;position:relative}
+.mapbox svg{width:100%;height:auto;display:block;max-height:78vh}
+.region{stroke:var(--sheet);stroke-width:.8;cursor:pointer;transition:fill .2s}
+.region:hover{stroke:var(--ink);stroke-width:1.4}
+.region.sel{stroke:var(--ink);stroke-width:2}
+.prov{fill:none;stroke:var(--ink);stroke-width:1;pointer-events:none;opacity:.55}
+.provhit{fill:transparent;cursor:pointer}
+.mk{fill:var(--signal);stroke:var(--ink);stroke-width:1}
+.mk.approx{fill:none;stroke:var(--signal);stroke-width:2;stroke-dasharray:3 2}
+.mlabel{font-family:var(--f-mono);font-size:10px;fill:var(--ink)}
+.maptools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.seg{display:inline-flex;border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+.seg button{border:0;background:var(--sheet);padding:5px 10px;font-size:.82rem;cursor:pointer;border-right:1px solid var(--rule)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.maplegend svg{width:14px;height:14px;display:inline-block;vertical-align:-2px}
+.maplegend{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:var(--step--1);color:var(--ink-2);margin-top:10px}
+.ramp{display:inline-flex}
+.ramp i{width:22px;height:10px;display:block}
+.panel{background:var(--sheet);border:1px solid var(--rule);border-radius:4px;padding:16px;max-height:78vh;overflow:auto}
+.panel h3{font-size:1.5rem;margin-bottom:4px}
+.panel .sub{font-size:var(--step--1);color:var(--ink-2);margin-bottom:14px}
+.plist{list-style:none;margin:0;padding:0}
+.plist li{padding:9px 0;border-top:1px solid var(--rule-2);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;cursor:pointer}
+.plist li:hover .t{text-decoration:underline}
+.plist .t{font-weight:500;font-size:.9rem;line-height:1.3}
+.plist .a{font-size:.78rem;color:var(--ink-2);grid-column:1}
+.plist .p{font-family:var(--f-mono);font-size:.78rem;color:var(--ink-2);grid-row:1 / span 2;grid-column:2;text-align:right}
+.hatch{background:repeating-linear-gradient(-45deg,transparent 0 3px,var(--ink-2) 3px 4px);opacity:.6}
+@media (max-width:900px){.mapgrid{grid-template-columns:1fr}.panel{max-height:none}}
+
+/* signals */
+.twocol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+@media (max-width:820px){.twocol{grid-template-columns:1fr}}
+.note{font-size:var(--step--1);color:var(--ink-2);max-width:62ch;margin-top:10px}
+
+/* method */
+.formula{font-family:var(--f-mono);font-size:.9rem;background:var(--sheet);border:1px solid var(--rule);border-left:4px solid var(--water);padding:14px 16px;border-radius:3px;overflow-x:auto;white-space:pre;line-height:1.7}
+.rubric{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--ink);margin-top:20px}
+.rubric div{padding:14px 14px 14px 0;border-bottom:1px solid var(--rule)}
+.rubric div + div{padding-left:14px;border-left:1px solid var(--rule)}
+.rubric b{font-family:var(--f-display);font-size:1.15rem;display:block;margin-bottom:6px;font-weight:600}
+.rubric p{font-size:.875rem;color:var(--ink-2)}
+@media (max-width:820px){.rubric{grid-template-columns:repeat(2,minmax(0,1fr))}.rubric div:nth-child(3){border-left:0;padding-left:0}}
+@media (max-width:520px){.rubric{grid-template-columns:1fr}.rubric div + div{border-left:0;padding-left:0}}
+.ok{color:var(--water);font-weight:600}
+.bad{color:var(--stop);font-weight:600}
+.limits{columns:2 320px;column-gap:40px;margin:0;padding-left:18px}
+.limits li{margin-bottom:8px;break-inside:avoid;font-size:.95rem}
+h3.sub{font-size:var(--step-2);margin:40px 0 14px}
+
+/* dossier drawer */
+.scrim{position:fixed;inset:0;background:color-mix(in srgb,var(--ink) 35%,transparent);z-index:40}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(720px,100%);background:var(--sheet);z-index:41;overflow-y:auto;border-left:1px solid var(--rule);
+  padding:calc(20px + env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) calc(40px + env(safe-area-inset-bottom,0px)) 24px;box-shadow:-12px 0 40px rgba(0,0,0,.18)}
+.drawer .close{position:sticky;top:0;float:right;margin-left:12px}
+.drawer h2{font-size:var(--step-3);margin:4px 0 8px;max-width:22ch}
+.drawer .who{color:var(--ink-2);font-size:.95rem}
+.drawer section{margin-top:26px}
+.drawer h4{font-family:var(--f-display);font-weight:600;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin:0 0 10px;border-bottom:1px solid var(--rule);padding-bottom:6px}
+.drawer p{max-width:64ch}
+.kv{display:grid;grid-template-columns:10rem minmax(0,1fr);gap:6px 14px;font-size:.9rem}
+.kv dt{color:var(--ink-2)} .kv dd{margin:0;min-width:0;overflow-wrap:anywhere}
+@media (max-width:520px){.kv{grid-template-columns:1fr}.kv dt{margin-top:6px}}
+.gauges{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.gauge{display:grid;gap:8px;justify-items:start;align-content:start}
+.gauge svg{width:34px;height:140px;display:block}
+.gauge .lab b{display:block;font-family:var(--f-display);font-size:1.05rem;line-height:1.1;font-weight:600}
+.gauge .lab span{font-family:var(--f-mono);font-size:.75rem;color:var(--ink-2)}
+@media (max-width:560px){.gauges{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.evid{font-size:.85rem;color:var(--ink-2);margin-top:12px;display:grid;gap:6px}
+.evid b{color:var(--ink);font-weight:600}
+.tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--rule);margin-left:6px}
+.tl li{position:relative;padding:0 0 14px 18px;font-size:.9rem}
+.tl li::before{content:"";position:absolute;left:-7px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--sheet);border:2px solid var(--water)}
+.tl li.mod::before{border-color:var(--stop)}
+.tl .d{font-family:var(--f-mono);font-size:.78rem;color:var(--ink-2)}
+.callout{background:var(--water-soft);border-radius:3px;padding:12px 14px;font-size:.92rem}
+.check{font-family:var(--f-mono);font-size:.8rem}
+
+footer{padding-block:40px 60px;font-size:var(--step--1);color:var(--ink-2)}
+footer .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+footer h4{font-family:var(--f-display);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin:0 0 8px;font-size:.95rem}
+footer ul{margin:0;padding-left:16px}
+footer li{margin-bottom:4px;overflow-wrap:anywhere}
+@media (max-width:820px){footer .cols{grid-template-columns:1fr}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top"><i aria-hidden="true"></i>Procurement Screen 2026</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#findings">Findings</a><a href="#shortlist">Shortlist</a><a href="#explorer">Explorer</a><a href="#map">Map</a><a href="#signals">Signals</a><a href="#method">Method</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow" id="heroEyebrow">TenderNed · notices published 1 Jan – 14 Oct 2026</div>
+      <h1>Dutch infrastructure <span>procurement screen</span></h1>
+      <div class="intro">
+        <div>
+          <p>A screen of Dutch infrastructure procurement for the problems capital-projects advisers work on. Every 2026 notice in the sample was read, scored against four capability areas and checked against its source.</p>
+          <p>It ranks where advisory work fits the problem a notice describes and whether there is still time to influence it. It does not show that an authority will buy advice, and contract size plays no part in the score.</p>
+        </div>
+        <div class="caps" aria-label="The four capability areas scored">
+          <div><b>Investment planning</b><span>business case, feasibility, phasing, programme choices</span></div>
+          <div><b>Procurement &amp; commercial</b><span>contract strategy, lotting, risk allocation, market response</span></div>
+          <div><b>Controls &amp; assurance</b><span>cost, schedule, risk and interfaces in delivery</span></div>
+          <div><b>Asset &amp; lifecycle</b><span>renewal, maintenance and life-extension of existing assets</span></div>
+        </div>
+      </div>
+      <div class="profile">
+        <svg id="funnel" role="img" aria-label="From 456 listing rows to an 18-project shortlist"></svg>
+        <div class="cap">Longitudinal section of the sample: bar heights to scale.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet" id="findings">
+    <div class="wrap">
+      <div class="block"><h2>Three findings</h2><div class="code">Sheet 01 · findings<br><b id="fCode"></b></div></div>
+      <div class="findings">
+        <article class="finding">
+          <div>
+            <div class="n">FINDING 1 · WHO IS STILL DECIDING</div>
+            <h3>The open strategy questions sit with regional and network owners, not with Rijkswaterstaat</h3>
+            <p id="f1text"></p>
+            <p>Rijkswaterstaat buys project-control and contract-management advice through its SROK PPB 2 framework (awarded July 2025), so its open questions mostly reach advisers as call-offs, not tenders.</p>
+          </div>
+          <figure><div class="legend" id="f1legend"></div><svg class="chart" id="f1"></svg><figcaption>Procedures by owner type and stage. Yellow figure: shortlisted projects led by that owner type.</figcaption></figure>
+        </article>
+        <article class="finding">
+          <div>
+            <div class="n">FINDING 2 · CHANGE IN DELIVERY</div>
+            <h3>Renewing assets that stay in use shows up as contract changes</h3>
+            <p id="f2text"></p>
+            <p>The official notices give reasons for some: pipe brackets on the Oosterscheldekering replaced after a TNO study; extra work at the Krammer locks for radio-coverage problems possibly linked to a nearby wind farm; repairs to Terbregseplein structures outside the A16 scope; TenneT raising a framework ceiling from €800m to €1.4bn.</p>
+          </div>
+          <figure><svg class="chart" id="f2"></svg><figcaption>Each dot is one 2026 modification notice. Contracts with two or more shown.</figcaption></figure>
+        </article>
+        <article class="finding">
+          <div>
+            <div class="n">FINDING 3 · GRID CONSTRAINTS</div>
+            <h3>On grid capacity, the evidence points to the contractor market</h3>
+            <p id="f3text"></p>
+            <p>What the notices do show is pressure on the companies building the grid: Stedin's high-voltage route programme (estimated €385m over eight years), TenneT's framework increases and a re-qualification of its cable contractors. Grid expansion reads here as a procurement and commercial problem.</p>
+          </div>
+          <figure><svg class="chart" id="f3"></svg><figcaption>Left: how much each procedure depends on new grid connection capacity. Right: how precisely the 45 grid-dependent ones are located. Hatched: none.</figcaption></figure>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet" id="shortlist">
+    <div class="wrap">
+      <div class="block"><h2>The shortlist</h2><div class="code">Sheet 02 · baseline weights<br><b>18 of 154 projects · confidence ≥ 2.5</b></div></div>
+      <p class="lede">Ranked under equal weights. The badge shows in how many of the seven weighting scenarios the project stays in the top 18; yellow means all seven. Values come from the official notice where the authority stated one.</p>
+      <ol class="slist" id="slist"></ol>
+    </div>
+  </section>
+
+  <section class="sheet" id="explorer">
+    <div class="wrap">
+      <div class="block"><h2>Explorer</h2><div class="code">Sheet 03 · all projects<br><b id="exCode"></b></div></div>
+      <p class="lede">Change what matters and watch the order move. The arrows compare each project with its rank under equal weights.</p>
+      <div class="explorer">
+        <div class="controls" aria-label="Scoring controls">
+          <div>
+            <h4>Scenario</h4>
+            <div class="presets" id="presets"></div>
+          </div>
+          <div>
+            <h4>Capability weights</h4>
+            <div id="sliders"></div>
+          </div>
+          <div>
+            <h4>Modifiers</h4>
+            <div class="slider"><label for="mt">Timing strength</label><output id="mtOut"></output><input type="range" id="mt" min="0" max="0.8" step="0.05"></div>
+            <div class="slider"><label for="mc">Confidence strength</label><output id="mcOut"></output><input type="range" id="mc" min="0" max="0.8" step="0.05"></div>
+          </div>
+          <div>
+            <h4>Filter</h4>
+            <label class="toggle"><input type="checkbox" id="zh"> Zuid-Holland lens</label>
+            <div class="field" style="margin-top:10px"><label for="fOwner">Owner type</label><select id="fOwner"></select></div>
+            <div class="field"><label for="fStage">Stage</label><select id="fStage"></select></div>
+            <div class="field"><label for="fSector">Sector</label><select id="fSector"></select></div>
+            <div class="field"><label for="fq">Search</label><input type="search" id="fq" placeholder="Bridge, Stedin, sluis…"></div>
+          </div>
+        </div>
+        <div style="min-width:0">
+          <div class="tabletools"><span id="exCount"></span><button class="btn small" id="copyCsv" type="button">Copy table as CSV</button></div>
+          <div class="tablewrap">
+            <table>
+              <thead><tr><th>Rank</th><th>Project</th><th>Stage</th><th title="Investment · Procurement · Controls · Asset">Scores I·P·C·A</th><th>Conf.</th><th>Stable</th><th>Priority</th></tr></thead>
+              <tbody id="exBody"></tbody>
+            </table>
+          </div>
+          <button class="btn more" id="exMore" type="button">Show all</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet" id="map">
+    <div class="wrap">
+      <div class="block"><h2>Map</h2><div class="code">Sheet 04 · location as stated<br><b id="mapCode"></b></div></div>
+      <p class="lede">Projects are drawn only as precisely as the notice locates them. Regions are the 40 NUTS 3 areas; a dashed ring marks a shortlisted project located to province level only. No project in the sample carries a site address.</p>
+      <div class="mapgrid">
+        <div class="mapbox">
+          <div class="maptools">
+            <div class="seg" role="group" aria-label="Layer"><button type="button" data-layer="region" aria-pressed="true">Located to region</button><button type="button" data-layer="province" aria-pressed="false">Located to province</button></div>
+            <div class="seg" role="group" aria-label="Extent"><button type="button" data-ext="nl" aria-pressed="true">Netherlands</button><button type="button" data-ext="zh" aria-pressed="false">Zuid-Holland</button></div>
+          </div>
+          <svg id="mapsvg" role="img" aria-label="Map of the Netherlands showing procedures per region"></svg>
+          <div class="maplegend"><span>Procedures</span><span class="ramp" id="ramp"></span><span id="rampLab"></span><span><svg width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" class="mk"/></svg> shortlisted</span><span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5" class="mk approx"/></svg> shortlisted, province only</span></div>
+        </div>
+        <div class="panel" id="mapPanel" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet" id="signals">
+    <div class="wrap">
+      <div class="block"><h2>Delivery signals</h2><div class="code">Sheet 05 · shown beside the score, not in it<br><b>exposure · grid · advisory position</b></div></div>
+      <p class="lede">These describe how hard a project is to deliver. They are kept out of the priority score: a hard project is not automatically a better advisory opportunity, and grid congestion does not penalise a dredging contract.</p>
+      <div class="twocol">
+        <div>
+          <h3 class="sub" style="margin-top:0">Delivery exposure</h3>
+          <svg class="chart" id="sigExp"></svg>
+          <p class="note">"Not evidenced" is not "low risk": it means the notice does not say. Signals match only what the notice text states, so the counts are conservative.</p>
+        </div>
+        <div>
+          <h3 class="sub" style="margin-top:0">Advisory position</h3>
+          <svg class="chart" id="sigAdv"></svg>
+          <p class="note">No advisory award linked to any shortlisted project was found in the 2026 sample or by targeted search. "Not found" is not "none engaged".</p>
+        </div>
+      </div>
+      <h3 class="sub">All 2026 contract modifications in the sample</h3>
+      <div class="tablewrap"><table><thead><tr><th>Contract</th><th>Authority</th><th>Notices</th><th>Latest</th></tr></thead><tbody id="modBody"></tbody></table></div>
+    </div>
+  </section>
+
+  <section class="sheet" id="method">
+    <div class="wrap">
+      <div class="block"><h2>Method &amp; validation</h2><div class="code">Sheet 06 · how the screen was built<br><b>reproducible · 11 Python scripts</b></div></div>
+      <p class="lede">The TenderNed public API was the working source; the TED API was unreachable from the analysis environment, but 154 of 183 procedures carry a TED number, so European notices are covered through TenderNed.</p>
+      <h3 class="sub" style="margin-top:0">Scoring</h3>
+      <div class="formula" id="formula"></div>
+      <div class="rubric">
+        <div><b>Investment planning</b><p>Scores high when the scope, phasing or business case is still open, or a later phase is not yet committed.</p></div>
+        <div><b>Procurement &amp; commercial</b><p>Scores high for strategy consultations, competitive dialogue, bouwteam, lotting choices, frameworks and re-tenders.</p></div>
+        <div><b>Controls &amp; assurance</b><p>Scores high for multi-discipline work in operating assets, many interfaces, fixed deadlines and multi-contract programmes.</p></div>
+        <div><b>Asset &amp; lifecycle</b><p>Scores high for renewal, life-extension and maintenance of critical existing assets.</p></div>
+      </div>
+      <p class="note">Each score starts from text rules with sentences that negate a scope removed first. All 183 records were then read and 187 scores adjusted, each with a one-line reason shown in the project dossier. <span id="agreeTxt"></span></p>
+
+      <h3 class="sub">Validation against the official notice</h3>
+      <p class="note" style="margin-top:0;margin-bottom:12px">The 18 shortlist lead notices plus 8 drawn at random were compared field by field with the official TenderNed PDF.</p>
+      <div class="tablewrap"><table><thead><tr><th>Notice</th><th>Sample</th><th>Title</th><th>Authority</th><th>Type</th><th>CPV</th><th>NUTS</th><th>Date Δ</th><th>Value in PDF</th></tr></thead><tbody id="valBody"></tbody></table></div>
+      <p class="note">Date differences of one or two days are PDF dispatch date versus TenderNed publication date. One content discrepancy: Stedin's notice states three lots where earlier summaries said two; the PDF is used.</p>
+
+      <h3 class="sub">Limits</h3>
+      <ul class="limits">
+        <li>A sample, not a census: newest-first queries per category concentrate it in May to October.</li>
+        <li>Notice descriptions were paraphrased by a language model during extraction; identifiers and codes were checked against the PDFs.</li>
+        <li>The need for advice is inferred from scope, procedure and stage. It is confirmed only where a notice buys advice directly.</li>
+        <li>Only 4 of 183 descriptions state a value, so size could not be used even if wanted.</li>
+        <li>The Netbeheer Nederland capacity map could not be retrieved, and no notice is located to a site. No grid figures are used.</li>
+        <li>One reviewer applied the rubric; agreement between two raters was not measured.</li>
+        <li>Programme clusters were defined by hand; other groupings would move some ranks.</li>
+        <li>Private and semi-public owners publish only what procurement law requires.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><h4>Sources</h4><ul>
+        <li>TenderNed public API and notice PDFs, tenderned.nl, retrieved 15 Oct 2026</li>
+        <li><a href="https://www.rijkswaterstaat.nl/nieuws/archief/2025/07/rijkswaterstaat-gunt-srok-project-en-procesbeheersing-2" target="_blank" rel="noopener">Rijkswaterstaat: SROK PPB 2 awarded (Jul 2025)</a></li>
+        <li><a href="https://www.rijkswaterstaat.nl/nieuws/archief/2026/10/rijkswaterstaat-en-samen-tekenen-contract-voor-transport-en-installatie-nieuwe-boogbruggen-van-brienenoordbrug" target="_blank" rel="noopener">Rijkswaterstaat: Van Brienenoordbrug arches contract (Oct 2026)</a></li>
+        <li><a href="https://www.rijkswaterstaat.nl/nieuws/archief/2026/09/start-aanbesteding-voor-bouw-nieuwe-westelijke-boog-van-brienenoordbrug" target="_blank" rel="noopener">Rijkswaterstaat: western arch tender (Sep 2026)</a></li>
+      </ul></div>
+      <div><h4>Map data</h4><ul>
+        <li>CBS gebiedsindelingen 2025 (COROP, provinces) via PDOK, simplified copies from github.com/cartomap/nl</li>
+        <li>Eurostat NUTS 2024 region identifiers via github.com/eurostat/Nuts2json</li>
+      </ul></div>
+      <div><h4>About</h4><p>Independent portfolio study. Not affiliated with or endorsed by any firm or authority named here. Scores are screening judgements for further investigation, not confirmed advisory needs. Data snapshot 14 Oct 2026.</p></div>
+    </div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="dTitle"></aside>
+
+<script type="application/json" id="data">__DATA__</script>
+<script id="core">
+/* ---- scoring core (also run by the parity test) ---- */
+const CAPS=["Investment planning","Procurement & commercial","Controls & assurance","Asset & lifecycle"];
+const PRESETS=[
+  {id:"base",label:"Equal weights",w:[.25,.25,.25,.25],mt:.4,mc:.3},
+  {id:"inv",label:"Investment emphasis",w:[.4,.2,.2,.2],mt:.4,mc:.3},
+  {id:"proc",label:"Procurement emphasis",w:[.2,.4,.2,.2],mt:.4,mc:.3},
+  {id:"ctrl",label:"Controls emphasis",w:[.2,.2,.4,.2],mt:.4,mc:.3},
+  {id:"asset",label:"Asset emphasis",w:[.2,.2,.2,.4],mt:.4,mc:.3},
+  {id:"rel",label:"Relevance only",w:[.25,.25,.25,.25],mt:0,mc:0},
+  {id:"time",label:"Timing-led",w:[.25,.25,.25,.25],mt:.7,mc:.3}];
+/* round to 1 decimal, half to even, as pandas .round(1) does */
+function r1(x){const y=x*10,f=Math.floor(y),d=y-f;if(Math.abs(d-.5)<1e-7)return(f%2===0?f:f+1)/10;return Math.round(y)/10}
+function scoreProc(p,w,mt,mc){
+  const ws=w.reduce((a,b)=>a+b,0)||1;
+  const rel=p.s.reduce((a,s,i)=>a+s*w[i]/ws,0);
+  const rel100=r1((rel-1)/4*100);
+  const tf=1-mt+mt*(p.timing-1)/4, cf=1-mc+mc*(p.conf-1)/4;
+  return {priority:r1(rel100*tf*cf),relevance:rel100};
+}
+function rankClusters(procs,w,mt,mc,minConf){
+  const by=new Map();
+  for(const p of procs){
+    const sc=scoreProc(p,w,mt,mc);
+    let c=by.get(p.cluster);
+    if(!c){c={name:p.cluster,order:p.order,members:[],priority:-1,relevance:0,lead:null,maxConf:0};by.set(p.cluster,c)}
+    c.members.push(p); c.maxConf=Math.max(c.maxConf,p.conf);
+    if(sc.priority>c.priority||(sc.priority===c.priority&&sc.relevance>c.relevance)){c.priority=sc.priority;c.relevance=sc.relevance;c.lead=p}
+  }
+  const list=[...by.values()].filter(c=>c.maxConf>=minConf)
+    .sort((a,b)=>b.priority-a.priority||b.relevance-a.relevance||a.order-b.order); /* exact ties keep the published cluster order */
+  list.forEach((c,i)=>c.rank=i+1);
+  return list;
+}
+</script>
+<script>
+const D=JSON.parse(document.getElementById("data").textContent);
+const P=D.procs, M=D.meta, N=M.N;
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const svgNS="http://www.w3.org/2000/svg";
+const cssv=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const TN="https://www.tenderned.nl/aankondigingen/overzicht/";
+const TYPE={VAK:"Prior information",MAC:"Market consultation",AAO:"Contract notice",REC:"Rectification",AGO:"Award",AAW:"Modification",VBE:"Early termination"};
+const STAGE=s=>/pre-tender|terminated|qualification/.test(s)?"open":/tendering|award pending/.test(s)?"tender":"done";
+const STAGE_LABEL={open:"Still open",tender:"In tender",done:"Awarded or in delivery"};
+function statusShort(s){
+  if(s.startsWith("pre-tender"))return["Pre-tender","st-open"];
+  if(s.startsWith("terminated"))return["Terminated","st-stop"];
+  if(s.startsWith("qualification"))return["Qualification open","st-open"];
+  if(s==="tendering")return["Tendering","st-tender"];
+  if(s.includes("award pending"))return["Award pending","st-tender"];
+  if(s.startsWith("in delivery"))return["In delivery","st-done"];
+  return["Awarded","st-done"];
+}
+const chip=s=>{const[l,c]=statusShort(s);return`<span class="chip ${c}">${l}</span>`};
+const eur=v=>{v=parseFloat(v);if(!v)return"value not stated";return v>=1e6?`€${(v/1e6).toLocaleString("en-GB",{maximumFractionDigits:1,minimumFractionDigits:1})}m`:`€${Math.round(v).toLocaleString("en-GB")}`};
+const short=new Map(D.shortlist.map(s=>[s.lead_procedure,s]));
+const procByKey=new Map(P.map(p=>[p.key,p]));
+const clusterShort=new Map();
+for(const s of D.shortlist){const p=procByKey.get(s.lead_procedure);if(p)clusterShort.set(p.cluster,s)}
+const LABELS={"31167987":"Spijkenisserbrug & Brug over de Noord","31192916":"Oosterscheldekering spare parts","31127608":"A27 Everdingen–Hooipolder","31138697":"Krammer locks","31193090":"N3 Papendrecht bridge","31181244":"Water Framework measures, east","31151121":"A2 Het Vonderen–Kerensheide","31198094":"Medium-voltage cables","31114126":"Hollandsche IJssel barrier upkeep"};
+const clean=t=>{const x=String(t).replace(/^\d{8}[:,]?\s*/,"");return x.charAt(0).toUpperCase()+x.slice(1)};
+const label=p=>LABELS[(p.title.match(/^(\d{8})/)||[])[1]]||short.get(p.key)?.project||clean(p.title);
+const niceName=c=>clusterShort.get(c.name)?.project||(c.members.length>1?c.name:clean(c.name));
+
+/* baseline + stability across presets */
+const base=rankClusters(P,PRESETS[0].w,PRESETS[0].mt,PRESETS[0].mc,M.minConf);
+const baseRank=new Map(base.map(c=>[c.name,c.rank]));
+const stability=new Map();
+for(const pr of PRESETS){for(const c of rankClusters(P,pr.w,pr.mt,pr.mc,M.minConf)){if(c.rank<=N)stability.set(c.name,(stability.get(c.name)||0)+1)}}
+const stab=name=>stability.get(name)||0;
+const stabBadge=name=>{const k=stab(name);return`<span class="stab ${k===7?"s7":""}" title="In the top ${N} in ${k} of 7 scenarios">${k}/7</span>`};
+
+/* ---------- hero funnel ---------- */
+function funnel(){
+  const svg=$("#funnel"), F=M.funnel, W=Math.max(320,svg.parentElement.clientWidth), narrow=W<640;
+  const H=narrow?170:210, top=36, base=H-30, max=F[0][1], step=W/F.length, fs=narrow?22:34;
+  const labs=narrow?["Rows","Notices","Procs","In scope","Projects","Shortlist"]:F.map(f=>f[0]);
+  let path=`M0,${base}`;
+  F.forEach(([lab,v],i)=>{const y=base-(base-top)*v/max, x=i*step; path+=`L${x},${y}L${x+step},${y}`;});
+  path+=`L${W},${base}Z`;
+  let s=`<path d="${path}" fill="var(--water-soft)" stroke="var(--water)" stroke-width="1.5"/><line x1="0" y1="${base}" x2="${W}" y2="${base}" stroke="var(--ink)" stroke-width="1.5"/>`;
+  F.forEach(([lab,v],i)=>{const y=base-(base-top)*v/max, x=i*step+(narrow?3:10);
+    if(i>0)s+=`<line x1="${i*step}" y1="${top-10}" x2="${i*step}" y2="${base}" stroke="var(--rule)" stroke-dasharray="2 3"/>`;
+    s+=`<text x="${x}" y="${y-7}" style="font-family:var(--f-display);font-weight:700;font-size:${fs}px;fill:var(--ink)">${v}</text>`;
+    s+=`<text x="${x}" y="${base+17}" style="font-family:var(--f-mono);font-size:${narrow?10:12}px;fill:var(--ink-2)">${esc(labs[i])}</text>`;
+    if(i===F.length-1)s+=`<rect x="${i*step}" y="${y-2}" width="${step}" height="4" fill="var(--signal)"/>`;
+  });
+  svg.setAttribute("viewBox",`0 0 ${W} ${H}`); svg.style.height=H+"px"; svg.innerHTML=s;
+}
+funnel(); let rsz; window.addEventListener("resize",()=>{clearTimeout(rsz);rsz=setTimeout(funnel,120)});
+$("#heroEyebrow").textContent=`TenderNed · ${M.nNotices} notices · 183 procedures · published 1 Jan – 14 Oct 2026`;
+
+/* ---------- findings ---------- */
+const OWNERS=["Rijkswaterstaat","Water authorities & water companies","Grid & energy companies","Transport & port operators","Provinces","Municipalities","Other public bodies"];
+const STAGES=["open","tender","done"], STC={open:"var(--open)",tender:"var(--tender)",done:"var(--done)"};
+(function f1(){
+  const rows=OWNERS.map(o=>{const ps=P.filter(p=>p.owner===o);const c={open:0,tender:0,done:0};ps.forEach(p=>c[STAGE(p.status)]++);
+    const sl=D.shortlist.filter(s=>procByKey.get(s.lead_procedure)?.owner===o).length;return{o,n:ps.length,c,sl}});
+  const W=640,L=210,R=56,rh=30,H=rows.length*rh+24, max=Math.max(...rows.map(r=>r.n));
+  const x=v=>(W-L-R)*v/max; let s="";
+  rows.forEach((r,i)=>{const y=i*rh+4; let cx=L;
+    s+=`<text x="${L-10}" y="${y+16}" text-anchor="end">${esc(r.o)}</text>`;
+    STAGES.forEach(k=>{const w=x(r.c[k]); if(w>0){s+=`<rect x="${cx}" y="${y+3}" width="${w}" height="18" fill="${STC[k]}" opacity="${k==="done"?.55:1}"><title>${STAGE_LABEL[k]}: ${r.c[k]}</title></rect>`; if(w>18)s+=`<text x="${cx+w/2}" y="${y+16}" text-anchor="middle" style="fill:var(--paper);font-family:var(--f-mono);font-size:11px">${r.c[k]}</text>`;} cx+=w;});
+    s+=`<text x="${cx+6}" y="${y+16}" class="mono muted">${r.n}</text>`;
+    if(r.sl)s+=`<g><rect x="${W-R+10}" y="${y+3}" width="26" height="18" rx="2" fill="var(--signal)"/><text x="${W-R+23}" y="${y+16}" text-anchor="middle" style="fill:var(--signal-ink);font-family:var(--f-mono);font-size:11px;font-weight:500">${r.sl}</text></g>`;
+  });
+  const svg=$("#f1"); svg.setAttribute("viewBox",`0 0 ${W+8} ${H}`); svg.innerHTML=s;
+  $("#f1legend").innerHTML=STAGES.map(k=>`<span><i style="background:${STC[k]};opacity:${k==="done"?.55:1}"></i>${STAGE_LABEL[k]}</span>`).join("")+`<span><i style="background:var(--signal)"></i>on the shortlist</span>`;
+  const rws=rows[0], reg=rows.slice(1,4); const regOpen=reg.reduce((a,r)=>a+r.c.open,0), regN=reg.reduce((a,r)=>a+r.n,0);
+  const slOpen=D.shortlist.filter(s=>STAGE(procByKey.get(s.lead_procedure).status)==="open").length;
+  $("#f1text").textContent=`${slOpen} of the 18 shortlisted projects are still before or between tenders, and none of them is a Rijkswaterstaat project. Water authorities, grid and energy companies and transport operators have ${regOpen} of their ${regN} procedures still open, against ${rws.c.open} of ${rws.n} at Rijkswaterstaat, whose entries are mostly awarded or in delivery.`;
+})();
+(function f2(){
+  const mods=P.map(p=>({p,ns:p.notices.filter(n=>n.type==="AAW")})).filter(x=>x.ns.length);
+  const total=mods.reduce((a,x)=>a+x.ns.length,0);
+  const rows=mods.filter(x=>x.ns.length>=2).sort((a,b)=>b.ns.length-a.ns.length);
+  const W=640,L=230,R=30,rh=26,H=rows.length*rh+36;
+  const t0=Date.parse("2026-01-01"),t1=Date.parse("2026-10-15"), X=d=>L+(W-L-R)*(Date.parse(d)-t0)/(t1-t0);
+  let s="";
+  ["2026-01-01","2026-04-01","2026-07-01","2026-10-01"].forEach(d=>{const x=X(d);s+=`<line x1="${x}" y1="0" x2="${x}" y2="${H-24}" stroke="var(--rule)"/><text x="${x}" y="${H-8}" text-anchor="middle" class="mono muted">${new Date(d).toLocaleString("en-GB",{month:"short"})}</text>`});
+  rows.forEach((r,i)=>{const y=i*rh+14, nm=label(r.p);
+    s+=`<text x="${L-10}" y="${y+4}" text-anchor="end">${esc(nm.length>34?nm.slice(0,33)+"…":nm)}<title>${esc(r.p.title)}</title></text>`;
+    s+=`<line x1="${L}" y1="${y}" x2="${W-R}" y2="${y}" stroke="var(--rule-2)"/>`;
+    r.ns.forEach(n=>{s+=`<circle cx="${X(n.date)}" cy="${y}" r="5" fill="var(--stop)" stroke="var(--sheet)" stroke-width="1.5"><title>${n.date}</title></circle>`});
+  });
+  const svg=$("#f2"); svg.setAttribute("viewBox",`0 0 ${W} ${H}`); svg.innerHTML=s;
+  const krammer=mods.find(x=>x.p.title.includes("Krammer"));
+  $("#f2text").textContent=`The sample holds ${total} modification notices on ${mods.length} running contracts, all but one from Rijkswaterstaat. Some contracts were changed repeatedly in a single year: the Krammer locks renovation ${krammer?krammer.ns.length+" times":"several times"}, bridge and barrier renewals up to six times. A modification notice is a public, repeatable sign that scope, interfaces or risk moved during delivery.`;
+})();
+(function f3(){
+  const cls=[["grid builder","Builds the grid"],["high","High"],["moderate","Moderate"],["low","Low"],["n/a (advisory service)","n/a (advice)"]];
+  const cnt=k=>P.filter(p=>p.grid===k).length;
+  const gm=P.filter(p=>["grid builder","high","moderate"].includes(p.grid));
+  const prec=[["Site address",0],["Region (NUTS 3)",gm.filter(p=>p.precision==="region").length],["Province",gm.filter(p=>p.precision==="province").length],["National only",gm.filter(p=>p.precision==="national").length]];
+  const W=640,H=230,base=180,top=24, mx=Math.max(...cls.map(c=>cnt(c[0])));
+  let s=`<defs><pattern id="hp" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="none"/><line x1="0" y1="0" x2="0" y2="6" stroke="var(--ink-2)" stroke-width="1.5"/></pattern></defs>`;
+  const bw=44, gap=12;
+  cls.forEach(([k,l],i)=>{const v=cnt(k), h=(base-top)*v/mx, x=i*(bw+gap); const hot=["grid builder","high","moderate"].includes(k);
+    s+=`<rect x="${x}" y="${base-h}" width="${bw}" height="${h}" fill="${hot?"var(--water)":"var(--done)"}" opacity="${hot?1:.45}"/><text x="${x+bw/2}" y="${base-h-6}" text-anchor="middle" class="mono">${v}</text>`;
+    l.split(" ").reduce((acc,wd)=>{const ln=acc[acc.length-1];(ln+" "+wd).trim().length>9?acc.push(wd):acc[acc.length-1]=(ln+" "+wd).trim();return acc},[""]).forEach((ln,j)=>s+=`<text x="${x+bw/2}" y="${base+16+j*13}" text-anchor="middle" class="muted" style="font-size:11px">${esc(ln)}</text>`);
+  });
+  const ox=330, mx2=Math.max(...prec.map(p=>p[1]));
+  s+=`<line x1="${ox-20}" y1="${top}" x2="${ox-20}" y2="${base+30}" stroke="var(--rule)"/>`;
+  prec.forEach(([l,v],i)=>{const h=(base-top)*v/mx2, x=ox+i*(bw+26);
+    if(v===0)s+=`<rect x="${x}" y="${top}" width="${bw}" height="${base-top}" fill="url(#hp)" stroke="var(--ink-2)" stroke-dasharray="3 3"/>`;
+    else s+=`<rect x="${x}" y="${base-h}" width="${bw}" height="${h}" fill="var(--water)"/>`;
+    s+=`<text x="${x+bw/2}" y="${(v?base-h:top)-6}" text-anchor="middle" class="mono">${v}</text>`;
+    l.split(" ").reduce((acc,wd)=>{const ln=acc[acc.length-1];(ln+" "+wd).trim().length>9?acc.push(wd):acc[acc.length-1]=(ln+" "+wd).trim();return acc},[""]).forEach((ln,j)=>s+=`<text x="${x+bw/2}" y="${base+16+j*13}" text-anchor="middle" class="muted" style="font-size:11px">${esc(ln)}</text>`);
+  });
+  s+=`<line x1="0" y1="${base}" x2="${W}" y2="${base}" stroke="var(--ink)"/>`;
+  const svg=$("#f3"); svg.setAttribute("viewBox",`0 0 ${W} ${H}`); svg.innerHTML=s;
+  $("#f3text").textContent=`Grid connection capacity matters to ${gm.length} of the 183 procedures. None is located precisely enough to join to the national grid-congestion map, which works at postcode level, and that map could not be retrieved for this analysis. The screen therefore records how much each project depends on the grid and leaves its congestion exposure open instead of guessing.`;
+})();
+$("#fCode").textContent=`${P.length} procedures · ${M.nNotices} notices`;
+
+/* ---------- shortlist ---------- */
+(function slist(){
+  $("#slist").innerHTML=D.shortlist.map(s=>{const p=procByKey.get(s.lead_procedure);const c=base.find(c=>c.name===p.cluster);
+    const why=s.why_it_matters.split(/(?<=\.)\s/)[0];
+    return`<li><div class="rk">${s.rank}</div><div style="min-width:0"><h3>${esc(s.project)}</h3>
+      <div class="meta">${chip(p.status)}<span>${esc(p.authority)}</span><span>${esc(s.main_capabilities)}</span></div>
+      <p>${esc(why)}</p></div>
+      <div class="side">${stabBadge(p.cluster)}<span class="val">${eur(s.value_eur_from_pdf)}</span><span class="val">priority ${c?c.priority.toFixed(1):p.priority}</span><button class="btn small" type="button" data-open="${esc(p.key)}">Dossier</button></div></li>`}).join("");
+})();
+
+/* ---------- explorer ---------- */
+const state={w:[...PRESETS[0].w],mt:PRESETS[0].mt,mc:PRESETS[0].mc,zh:false,owner:"",stage:"",sector:"",q:"",all:false};
+let current=[];
+function initControls(){
+  $("#presets").innerHTML=PRESETS.map(p=>`<button type="button" data-preset="${p.id}" aria-pressed="${p.id==="base"}">${p.label}</button>`).join("");
+  $("#sliders").innerHTML=CAPS.map((c,i)=>`<div class="slider"><label for="w${i}">${c}</label><output id="w${i}o"></output><input type="range" id="w${i}" min="0" max="100" step="5"></div>`).join("");
+  const opt=(id,vals,labAll)=>{$(id).innerHTML=`<option value="">${labAll}</option>`+vals.map(([v,l])=>`<option value="${esc(v)}">${esc(l)}</option>`).join("")};
+  opt("#fOwner",OWNERS.map(o=>[o,o]),"All owners");
+  opt("#fStage",STAGES.map(k=>[k,STAGE_LABEL[k]]),"All stages");
+  const sectors=[...new Set(P.flatMap(p=>p.strata.split(";")))].filter(Boolean).sort();
+  opt("#fSector",sectors.map(s=>[s,s[0].toUpperCase()+s.slice(1)]),"All sectors");
+  syncControls();
+  document.addEventListener("click",e=>{const b=e.target.closest("[data-preset]");if(!b)return;const p=PRESETS.find(x=>x.id===b.dataset.preset);state.w=[...p.w];state.mt=p.mt;state.mc=p.mc;syncControls();renderExplorer()});
+  CAPS.forEach((c,i)=>$("#w"+i).addEventListener("input",e=>{state.w[i]=e.target.value/100;syncControls(true);renderExplorer()}));
+  $("#mt").addEventListener("input",e=>{state.mt=+e.target.value;syncControls(true);renderExplorer()});
+  $("#mc").addEventListener("input",e=>{state.mc=+e.target.value;syncControls(true);renderExplorer()});
+  $("#zh").addEventListener("change",e=>{state.zh=e.target.checked;renderExplorer()});
+  $("#fOwner").addEventListener("change",e=>{state.owner=e.target.value;renderExplorer()});
+  $("#fStage").addEventListener("change",e=>{state.stage=e.target.value;renderExplorer()});
+  $("#fSector").addEventListener("change",e=>{state.sector=e.target.value;renderExplorer()});
+  $("#fq").addEventListener("input",e=>{state.q=e.target.value.trim().toLowerCase();renderExplorer()});
+  $("#exMore").addEventListener("click",()=>{state.all=!state.all;renderExplorer()});
+  $("#copyCsv").addEventListener("click",copyCsv);
+}
+function syncControls(fromSlider){
+  const ws=state.w.reduce((a,b)=>a+b,0)||1;
+  CAPS.forEach((c,i)=>{if(!fromSlider)$("#w"+i).value=Math.round(state.w[i]*100);$("#w"+i+"o").textContent=Math.round(state.w[i]/ws*100)+"%"});
+  if(!fromSlider){$("#mt").value=state.mt;$("#mc").value=state.mc}
+  $("#mtOut").textContent=state.mt.toFixed(2);$("#mcOut").textContent=state.mc.toFixed(2);
+  const match=PRESETS.find(p=>p.w.every((v,i)=>Math.abs(v/p.w.reduce((a,b)=>a+b,0)-state.w[i]/ws)<1e-6)&&Math.abs(p.mt-state.mt)<1e-6&&Math.abs(p.mc-state.mc)<1e-6);
+  document.querySelectorAll("[data-preset]").forEach(b=>b.setAttribute("aria-pressed",String(match?.id===b.dataset.preset)));
+}
+function passes(c){
+  const ms=c.members;
+  if(state.zh&&!ms.some(p=>p.provinces.includes("Zuid-Holland")))return false;
+  if(state.owner&&!ms.some(p=>p.owner===state.owner))return false;
+  if(state.stage&&!ms.some(p=>STAGE(p.status)===state.stage))return false;
+  if(state.sector&&!ms.some(p=>p.strata.split(";").includes(state.sector)))return false;
+  if(state.q&&!ms.some(p=>(p.title+" "+p.authority+" "+p.scope+" "+niceName(c)).toLowerCase().includes(state.q)))return false;
+  return true;
+}
+function renderExplorer(){
+  const ranked=rankClusters(P,state.w,state.mt,state.mc,M.minConf);
+  current=ranked.filter(passes);
+  const show=state.all?current:current.slice(0,30);
+  const mx=Math.max(1,...ranked.map(c=>c.priority));
+  $("#exBody").innerHTML=show.map(c=>{const p=c.lead, b=baseRank.get(c.name), d=b-c.rank;
+    const dl=d===0?"":`<span class="delta ${d>0?"up":"down"}">${d>0?"▲":"▼"}${Math.abs(d)}</span>`;
+    const sc=p.s.map((v,i)=>`<i style="height:${v*5}px" title="${CAPS[i]} ${v} (rule ${p.rule[i]})"></i>`).join("");
+    return`<tr class="${c.rank<=N?"top":""}" data-open="${esc(p.key)}" tabindex="0"><td class="rk">${c.rank}${dl}</td>
+      <td><div class="t">${esc(niceName(c))}</div><div class="a">${esc(p.authority)}${c.members.length>1?` · ${c.members.length} procedures`:""}</div></td>
+      <td>${chip(p.status)}</td><td><div class="sc">${sc}</div></td><td class="mono">${p.conf.toFixed(1)}</td><td>${stabBadge(c.name)}</td>
+      <td><div class="pbar"><span><i style="width:${c.priority/mx*100}%"></i></span><b class="mono">${c.priority.toFixed(1)}</b></div></td></tr>`}).join("")
+    ||`<tr><td colspan="7" style="color:var(--ink-2);padding:20px">No project matches these filters. Clear a filter or the search box.</td></tr>`;
+  $("#exCount").textContent=`${current.length} of ${ranked.length} projects shown${current.length>30&&!state.all?" · first 30":""} · top ${N} marked`;
+  $("#exMore").hidden=current.length<=30; $("#exMore").textContent=state.all?"Show first 30":"Show all "+current.length;
+  $("#exCode").textContent=`${ranked.length} projects · ${P.length} procedures`;
+}
+function copyCsv(){
+  const q=v=>`"${String(v).replace(/"/g,'""')}"`;
+  const rows=[["rank","baseline_rank","project","authority","status","investment","procurement","controls","asset","confidence","priority","stable_of_7","source"]]
+    .concat(current.map(c=>[c.rank,baseRank.get(c.name),niceName(c),c.lead.authority,c.lead.status,...c.lead.s,c.lead.conf,c.priority,stab(c.name),c.lead.url]));
+  const txt=rows.map(r=>r.map(q).join(",")).join("\n"); const b=$("#copyCsv");
+  const done=ok=>{b.textContent=ok?"Copied":"Copy failed: select the table instead";setTimeout(()=>b.textContent="Copy table as CSV",2200)};
+  try{navigator.clipboard.writeText(txt).then(()=>done(true),()=>done(false))}catch(e){done(false)}
+}
+
+/* ---------- map ---------- */
+const G=D.geo; const mapState={layer:"region",ext:"nl",sel:null};
+function rampColor(v,max){if(!v)return"var(--ramp-0)";const t=v/max;return t>.75?"var(--ramp-4)":t>.5?"var(--ramp-3)":t>.25?"var(--ramp-2)":"var(--ramp-1)"}
+function renderMap(){
+  const svg=$("#mapsvg");
+  const byRegion=new Map(G.regions.map(r=>[r.id,[]])), byProv=new Map(G.provinces.map(p=>[p.name,[]]));
+  P.forEach(p=>{if(p.precision==="region")p.regions.forEach(id=>byRegion.get(id)?.push(p));if(p.precision==="province")p.provinces.forEach(n=>byProv.get(n)?.push(p))});
+  const maxR=Math.max(...[...byRegion.values()].map(a=>a.length)), maxP=Math.max(...[...byProv.values()].map(a=>a.length));
+  let s="";
+  if(mapState.layer==="region"){
+    s+=G.regions.map(r=>`<path class="region${mapState.sel===r.id?" sel":""}" d="${r.d}" fill="${rampColor(byRegion.get(r.id).length,maxR)}" data-region="${r.id}"><title>${esc(r.name)}: ${byRegion.get(r.id).length}</title></path>`).join("");
+  }else{
+    s+=G.regions.map(r=>`<path d="${r.d}" fill="var(--ramp-0)" stroke="var(--sheet)" stroke-width=".6"/>`).join("");
+    s+=G.provinces.map(p=>`<path class="region${mapState.sel===p.name?" sel":""}" d="${p.d}" fill="${rampColor(byProv.get(p.name).length,maxP)}" data-prov="${esc(p.name)}"><title>${esc(p.name)}: ${byProv.get(p.name).length}</title></path>`).join("");
+  }
+  s+=G.provinces.map(p=>`<path class="prov" d="${p.d}"/>`).join("");
+  // shortlist markers: grouped by anchor point, fanned out on a small ring
+  const groups=new Map();
+  D.shortlist.forEach(sh=>{const p=procByKey.get(sh.lead_procedure); let x,y,approx=false;
+    if(p.precision==="region"){const r=G.regions.find(r=>r.id===p.regions[0]);x=r.cx;y=r.cy}
+    else if(p.precision==="province"){const pv=G.provinces.find(v=>v.name===p.provinces[0]);x=pv.cx;y=pv.cy;approx=true}
+    else return;
+    const k=x+","+y; if(!groups.has(k))groups.set(k,[]); groups.get(k).push({sh,p,x,y,approx})});
+  for(const g of groups.values()){const n=g.length, rad=n>1?8+n*2.2:0;
+    g.forEach((m,i)=>{const a=-Math.PI/2+2*Math.PI*i/n, x=m.x+rad*Math.cos(a), y=m.y+rad*Math.sin(a), lx=x+(n>1?Math.cos(a)*11:9), ly=y+(n>1?Math.sin(a)*11:-7);
+      s+=`<g data-open="${esc(m.p.key)}" style="cursor:pointer"><circle class="mk${m.approx?" approx":""}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${m.approx?6:5}"><title>${m.sh.rank}. ${esc(m.sh.project)}${m.approx?" (province level)":""}</title></circle><text class="mlabel" x="${lx.toFixed(1)}" y="${(ly+3).toFixed(1)}" text-anchor="${n>1?(Math.cos(a)>.3?"start":Math.cos(a)<-.3?"end":"middle"):"start"}">${m.sh.rank}</text></g>`})}
+  const zh=G.provinces.find(p=>p.name==="Zuid-Holland").bbox, vb=mapState.ext==="zh"?[zh[0]-20,zh[1]-20,zh[2]+40,zh[3]+40]:[G.bbox[0]-10,G.bbox[1]-10,G.bbox[2]+20,G.bbox[3]+20];
+  svg.setAttribute("viewBox",vb.join(" ")); svg.innerHTML=s;
+  const max=mapState.layer==="region"?maxR:maxP;
+  $("#ramp").innerHTML=["--ramp-0","--ramp-1","--ramp-2","--ramp-3","--ramp-4"].map(v=>`<i style="background:var(${v})"></i>`).join("");
+  $("#rampLab").textContent=`0 – ${max}`;
+  const nat=P.filter(p=>p.precision==="national").length, nR=P.filter(p=>p.precision==="region").length, nP=P.filter(p=>p.precision==="province").length;
+  $("#mapCode").textContent=`${nR} to region · ${nP} to province · ${nat} national`;
+  renderPanel(byRegion,byProv);
+}
+function renderPanel(byRegion,byProv){
+  let title,sub,list;
+  if(mapState.sel&&byRegion.has(mapState.sel)){const r=G.regions.find(r=>r.id===mapState.sel);title=r.name;sub=`${r.id} · ${r.province} · procedures located to this region`;list=byRegion.get(r.id)}
+  else if(mapState.sel&&byProv.has(mapState.sel)){title=mapState.sel;sub="Procedures located to province level only";list=byProv.get(mapState.sel)}
+  else{title="National or unlocated";sub="These notices name the whole country or several provinces. Select an area on the map to list its procedures.";list=P.filter(p=>p.precision==="national")}
+  list=[...list].sort((a,b)=>b.priority-a.priority);
+  $("#mapPanel").innerHTML=`<h3>${esc(title)}</h3><div class="sub">${esc(sub)} · ${list.length}</div><ul class="plist">${list.map(p=>`<li data-open="${esc(p.key)}" tabindex="0"><span class="t">${short.has(p.key)?"★ ":""}${esc(label(p))}</span><span class="a">${esc(p.authority)} · ${statusShort(p.status)[0]}</span><span class="p">${p.priority.toFixed(1)}</span></li>`).join("")}</ul>`;
+}
+document.addEventListener("click",e=>{
+  const lb=e.target.closest("[data-layer]");if(lb){mapState.layer=lb.dataset.layer;mapState.sel=null;document.querySelectorAll("[data-layer]").forEach(b=>b.setAttribute("aria-pressed",String(b===lb)));renderMap();return}
+  const eb=e.target.closest("[data-ext]");if(eb){mapState.ext=eb.dataset.ext;document.querySelectorAll("[data-ext]").forEach(b=>b.setAttribute("aria-pressed",String(b===eb)));renderMap();return}
+  const rg=e.target.closest("[data-region],[data-prov]");if(rg){const id=rg.dataset.region||rg.dataset.prov;mapState.sel=mapState.sel===id?null:id;renderMap();return}
+});
+
+/* ---------- signals ---------- */
+(function signals(){
+  const hbar=(id,rows,color)=>{const W=520,L=200,rh=28,H=rows.length*rh+6,mx=Math.max(...rows.map(r=>r[1]));
+    $(id).setAttribute("viewBox",`0 0 ${W} ${H}`);
+    $(id).innerHTML=rows.map(([l,v,c],i)=>{const y=i*rh;const w=(W-L-40)*v/mx;return`<text x="${L-10}" y="${y+17}" text-anchor="end">${esc(l)}</text><rect x="${L}" y="${y+5}" width="${Math.max(w,1)}" height="16" fill="${c||color}"/><text x="${L+w+6}" y="${y+17}" class="mono">${v}</text>`}).join("")};
+  const ex=k=>P.filter(p=>p.exposure===k).length;
+  const sig=["procurement market response","live-operation constraint","hard external deadline","owner integrates many packages","single-supplier dependency","framework headroom exhausted"];
+  hbar("#sigExp",[["Exposure high",ex("high"),"var(--stop)"],["Exposure medium",ex("medium"),"var(--open)"],["Low or not evidenced",ex("low / not evidenced"),"var(--done)"]]
+    .concat(sig.map(s=>[s[0].toUpperCase()+s.slice(1),P.filter(p=>p.signals.some(x=>x.trim()===s)).length,"var(--water)"])),"var(--water)");
+  const adv=k=>P.filter(p=>p.advisory.includes(k)).length;
+  hbar("#sigAdv",[["Advice bought directly",P.filter(p=>p.isAdvisory).length,"var(--water)"],["RWS framework route",adv("SROK"),"var(--water)"],["Advisory award found",P.filter(p=>/already awarded/i.test(p.advisory)).length,"var(--open)"],["Advisory tender in progress",P.filter(p=>/in progress/i.test(p.advisory)).length,"var(--open)"]],"var(--water)");
+  const mods=P.map(p=>({p,ns:p.notices.filter(n=>n.type==="AAW")})).filter(x=>x.ns.length).sort((a,b)=>b.ns.length-a.ns.length||b.ns.at(-1).date.localeCompare(a.ns.at(-1).date));
+  $("#modBody").innerHTML=mods.map(x=>`<tr data-open="${esc(x.p.key)}" tabindex="0"><td><div class="t">${esc(label(x.p))}</div></td><td class="a">${esc(x.p.authority)}</td><td class="mono">${x.ns.length}</td><td class="mono">${x.ns.at(-1).date}</td></tr>`).join("");
+})();
+
+/* ---------- method ---------- */
+(function method(){
+  const w=M.weights, mo=M.modifiers;
+  $("#formula").textContent=
+`relevance  = Σ (weight × score)          scores 1–5, weights ${Object.values(w).join(" / ")}, rescaled to 0–100
+timing     = 1 − ${mo.timing} + ${mo.timing} × (timing − 1) / 4     pre-tender 5 · terminated 4 · in tender 3 · awarded 2
+confidence = 1 − ${mo.confidence} + ${mo.confidence} × (confidence − 1) / 4
+priority   = relevance × timing × confidence      shortlist: top ${N} clusters with confidence ≥ ${M.minConf}`;
+  const vs=M.validationSummary, rb=vs.rule_review_by_capability;
+  $("#agreeTxt").textContent=`Review left ${Math.round(vs.rule_review_agreement_overall*1000)/10}% of scores unchanged and mostly raised the rest (raised/lowered: investment ${rb.investment_planning.raised}/${rb.investment_planning.lowered}, procurement ${rb.procurement_commercial.raised}/${rb.procurement_commercial.lowered}, controls ${rb.controls_assurance.raised}/${rb.controls_assurance.lowered}, asset ${rb.asset_lifecycle.raised}/${rb.asset_lifecycle.lowered}): the text rules are conservative on short notices.`;
+  const ck=b=>b?`<span class="ok">✓</span>`:`<span class="bad">✕</span>`;
+  $("#valBody").innerHTML=D.validation.map(v=>`<tr><td class="mono"><a href="${TN}${v.id}" target="_blank" rel="noopener">${v.id}</a></td><td class="a">${v.sample}</td><td>${ck(v.titleOk)} <span class="a">${v.titleSim.toFixed(2)}</span></td><td>${ck(v.authOk)}</td><td>${ck(v.typeOk)}</td><td>${ck(v.cpvOk)}</td><td class="a">${v.nuts==="match"?ck(true):esc(v.nuts.replace("n/a ","n/a "))}</td><td class="mono">${v.dateDiff==null?"–":v.dateDiff+" d"}</td><td class="mono">${v.value?eur(v.value):v.placeholder?"placeholder":"–"}</td></tr>`).join("");
+})();
+
+/* ---------- dossier ---------- */
+function gauge(v,rule){
+  const H=140,top=6,bot=H-6,y=s=>bot-(bot-top)*(s/5);
+  let s=`<rect x="4" y="${top}" width="18" height="${bot-top}" fill="var(--paper)" stroke="var(--ink)" stroke-width="1"/>`;
+  for(let i=0;i<10;i++){const y0=y(i/2),y1=y((i+1)/2);if(i%2===0)s+=`<path d="M4,${y1}h12v${(y0-y1)/3}h-8v${(y0-y1)/3}h8v${(y0-y1)/3}h-12Z" fill="var(--ink)" opacity=".85"/>`}
+  s+=`<rect x="4" y="${y(v)}" width="18" height="${bot-y(v)}" fill="var(--water)" opacity=".55"/><line x1="0" y1="${y(v)}" x2="26" y2="${y(v)}" stroke="var(--water)" stroke-width="2.5"/>`;
+  if(rule!=null&&rule!==v)s+=`<path d="M26,${y(rule)}l7,-4v8Z" fill="var(--ink-2)"><title>rule score ${rule}</title></path>`;
+  [1,3,5].forEach(k=>s+=`<text x="30" y="${y(k)+4}" style="font-family:var(--f-mono);font-size:9px;fill:var(--ink-2)">${k}</text>`);
+  return`<svg viewBox="0 0 40 ${H}" aria-hidden="true">${s}</svg>`;
+}
+function openDossier(key){
+  const p=procByKey.get(key); if(!p)return; const sh=short.get(key);
+  const ranked=rankClusters(P,state.w,state.mt,state.mc,M.minConf); const c=ranked.find(c=>c.name===p.cluster);
+  const val=D.validation.find(v=>p.notices.some(n=>n.id===v.id));
+  const reviews=Object.fromEntries((p.review||"").split(/\.\s(?=[a-z_]+:)/).map(t=>{const m=t.match(/^([a-z_]+):\s*(.*)$/);return m?[m[1],m[2].trim().replace(/[.\s]+$/,"")]:null}).filter(Boolean));
+  const capKeys=["investment_planning","procurement_commercial","controls_assurance","asset_lifecycle"];
+  const sib=p.programme?P.filter(q=>q.cluster===p.cluster&&q.key!==p.key):[];
+  let h=`<button class="btn small close" type="button" id="dClose">Close</button>
+  <div class="mono" style="color:var(--ink-2)">${sh?`SHORTLIST #${sh.rank} · `:""}${c?`RANK ${c.rank} OF ${ranked.length}`:"BELOW CONFIDENCE THRESHOLD"} · ${p.programme?esc(p.programme):"single procedure"}</div>
+  <h2 id="dTitle">${esc(label(p))}</h2><div class="who">${esc(p.authority)} · ${chip(p.status)} ${c?stabBadge(c.name):""}</div>`;
+  if(sh)h+=`<section><h4>Why it matters</h4><p>${esc(sh.why_it_matters)}</p></section>`;
+  h+=`<section><h4>Scope (from the notice, paraphrased)</h4><p>${esc(p.scope)}</p>${sh?"":`<p class="note" style="margin-top:8px">Notice title: ${esc(p.title)}</p>`}</section>`;
+  h+=`<section><h4>Capability scores</h4><div class="gauges">${CAPS.map((nm,i)=>`<div class="gauge">${gauge(p.s[i],p.rule[i])}<div class="lab"><b>${nm}</b><span>${p.s[i]} reviewed · ${p.rule[i]} rule</span></div></div>`).join("")}</div>
+    <div class="evid">${CAPS.map((nm,i)=>{const r=reviews[capKeys[i]];const e=p.ev[i];return(r||e)?`<div><b>${nm}.</b> ${e?`Rules matched: ${esc(e)}.`:"No rule matched."} ${r?`Review: ${esc(r)}.`:""}</div>`:""}).join("")}</div>
+    <dl class="kv" style="margin-top:14px"><dt>Timing</dt><dd>${p.timing} of 5 · ${esc(p.timingNote)}</dd><dt>Evidence confidence</dt><dd>${p.conf} of 5 · ${esc(p.confBasis)}</dd><dt>Priority now</dt><dd>${c?`${scoreProc(p,state.w,state.mt,state.mc).priority.toFixed(1)} (baseline ${p.priority.toFixed(1)})`:p.priority.toFixed(1)}</dd></dl></section>`;
+  if(sh)h+=`<section><h4>Advisory status</h4><div class="callout">${esc(sh.advisory_status)}</div></section>
+    <section><h4>Evidence gaps</h4><p>${esc(sh.evidence_gaps)}</p></section><section><h4>Follow-up</h4><p>${esc(sh.follow_up)}</p></section>`;
+  else if(p.advisory)h+=`<section><h4>Advisory position</h4><div class="callout">${esc(p.advisory)}</div></section>`;
+  h+=`<section><h4>Delivery signals</h4><dl class="kv"><dt>Delivery exposure</dt><dd>${esc(p.exposure)}${p.signals.length?` · ${esc(p.signals.join(", "))}`:""}</dd><dt>Grid dependence</dt><dd>${esc(p.grid)}${p.gridBasis?` · ${esc(p.gridBasis)}`:""}</dd></dl></section>`;
+  h+=`<section><h4>2026 notices</h4><ul class="tl">${p.notices.map(n=>`<li class="${n.type==="AAW"?"mod":""}"><div class="d">${n.date} · ${TYPE[n.type]||n.type} · <a href="${TN}${n.id}" target="_blank" rel="noopener">${n.id}</a></div>${esc(n.gist)}</li>`).join("")}</ul></section>`;
+  h+=`<section><h4>Record</h4><dl class="kv"><dt>Location</dt><dd>${p.precision==="region"?esc(p.regions.map(r=>G.regions.find(g=>g.id===r)?.name+" ("+r+")").join(", ")):p.precision==="province"?esc(p.provinces.join(", "))+" · province level":"national or several provinces"} · ${esc(p.locSource)}</dd>
+    <dt>Main CPV</dt><dd class="mono">${esc(p.cpv)}</dd><dt>Procedure</dt><dd>${esc(p.procedureCode||"–")}${p.ted?` · TED ${esc(p.ted)}`:""}</dd>
+    <dt>Contract period</dt><dd>${p.start||p.end?`${esc(p.start||"?")} to ${esc(p.end||"?")}`:"not stated"}</dd>
+    ${sh?`<dt>Value (official notice)</dt><dd>${eur(sh.value_eur_from_pdf)}</dd>${sh.winner_from_pdf?`<dt>Winner</dt><dd>${esc(sh.winner_from_pdf)}</dd>`:""}`:""}
+    ${val?`<dt>Validated against PDF</dt><dd class="check">title ${val.titleOk?"✓":"✕"} · authority ${val.authOk?"✓":"✕"} · type ${val.typeOk?"✓":"✕"} · CPV ${val.cpvOk?"✓":"✕"} · NUTS ${esc(val.nuts)}${val.note?`<br>${esc(val.note)}`:""}</dd>`:""}
+  </dl></section>`;
+  if(sib.length)h+=`<section><h4>Other procedures in this programme</h4><ul class="plist">${sib.map(q=>`<li data-open="${esc(q.key)}" tabindex="0"><span class="t">${esc(clean(q.title))}</span><span class="a">${statusShort(q.status)[0]}</span><span class="p">${q.priority.toFixed(1)}</span></li>`).join("")}</ul></section>`;
+  if(sh)h+=`<section><h4>Sources</h4><ul style="padding-left:18px;margin:0;font-size:.875rem">${sh.sources.split(" ; ").map(u=>`<li style="overflow-wrap:anywhere"><a href="${esc(u.trim())}" target="_blank" rel="noopener">${esc(u.trim().replace(/^https:\/\/(www\.)?/,""))}</a></li>`).join("")}</ul></section>`;
+  const d=$("#drawer"); d.innerHTML=h; d.hidden=false; $("#scrim").hidden=false; d.scrollTop=0; document.body.style.overflow="hidden";
+  lastFocus=document.activeElement; $("#dClose").focus();
+}
+let lastFocus=null;
+function closeDossier(){$("#drawer").hidden=true;$("#scrim").hidden=true;document.body.style.overflow="";lastFocus?.focus?.()}
+document.addEventListener("click",e=>{if(e.target.closest("#dClose")||e.target.id==="scrim"){closeDossier();return}const o=e.target.closest("[data-open]");if(o&&!e.target.closest("a"))openDossier(o.dataset.open)});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("#drawer").hidden)closeDossier();if((e.key==="Enter"||e.key===" ")&&e.target.matches("[data-open][tabindex]")){e.preventDefault();openDossier(e.target.dataset.open)}});
+
+initControls(); renderExplorer(); renderMap();
+</script>

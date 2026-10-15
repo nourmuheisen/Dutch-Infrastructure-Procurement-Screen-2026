@@ -1,0 +1,188 @@
+procedure_key,capability,rule_score,reviewed_score,rationale
+MANUAL-den haag|inthr lijn 6 en lijn 12,procurement_commercial,1.5,3,multi-year cooperation agreement in two lots with MRDH and HTM as co-clients
+MANUAL-den haag|inthr lijn 6 en lijn 12,controls_assurance,1.5,4,track + stops + sewers + signals + public space under live tram operation; programme with optional subprojects
+MANUAL-den haag|inthr lijn 6 en lijn 12,asset_lifecycle,2.0,3,renewal of existing tram lines for new rolling stock
+MANUAL-enschede|ingenieursdiensten pathmos stadsveld,investment_planning,2.5,3,design options must be explicitly weighed to a feasible and politically defensible solution
+MANUAL-ret|raamovereenkomst laswerkzaamheden tramspoor,asset_lifecycle,1.0,2,routine track maintenance framework
+MANUAL-stedin|hs trace werkzaamheden,investment_planning,2.0,3,grid-expansion volume ramping from about 30 to 65 million EUR a year over eight years
+MANUAL-stedin|hs trace werkzaamheden,procurement_commercial,1.5,5,eight-year two-lot programme with four framework agreements; engineering optionally by contractor or client; qualification-scheme entry
+MANUAL-stedin|hs trace werkzaamheden,controls_assurance,1.0,3,multi-year HV programme across the service area with client-supplied materials (interface risk)
+RWS-31003668,asset_lifecycle,2.0,3,asset-data collection and delivery (DTB/BGT/KernGIS) is asset-information management
+RWS-31066756,controls_assurance,2.0,3,temporary tunnel bypass and traffic diversion under a running DBFM
+RWS-31090726,controls_assurance,1.5,3,scope change on a running DBFM motorway contract with many structures
+RWS-31090726,asset_lifecycle,2.5,3,25-year maintenance phase
+RWS-31100826,procurement_commercial,3.0,4,DBFM with financing plus contract modification
+RWS-31100826,controls_assurance,1.5,4,2.2 km half-sunken tunnel and three rail crossings; scope change on running contract
+RWS-31100826,asset_lifecycle,2.5,3,20-year maintenance phase
+RWS-31114126,asset_lifecycle,3.5,4,maintenance contract with monitoring on a nationally critical storm surge barrier
+RWS-31127608,procurement_commercial,2.0,3,competitive dialogue plus contract modification
+RWS-31127608,controls_assurance,2.0,4,several bridge replacements incl. movable span and junctions on a live motorway; scope change
+RWS-31137550,asset_lifecycle,3.0,4,performance-based waterway maintenance with up-to-date asset data
+RWS-31138697,procurement_commercial,2.0,3,competitive dialogue plus contract modification
+RWS-31138697,controls_assurance,2.0,4,civil + mechanical + E&I + remote operation on a lock complex in use by shipping; 2024-2031
+RWS-31138697,asset_lifecycle,3.5,4,renovation of a critical lock complex with maintenance after completion
+RWS-31139442,controls_assurance,3.5,3,maintenance contract; complexity is operational rather than delivery
+RWS-31139442,asset_lifecycle,3.5,4,performance contract with condition monitoring on a nationally critical barrier
+RWS-31151121,procurement_commercial,2.0,3,competitive dialogue design-and-build plus modification
+RWS-31151121,controls_assurance,2.0,4,20 km widening and 11 structures on a live motorway; scope change
+RWS-31152626,asset_lifecycle,5.0,4,single critical asset life extension (rubric level 4 rather than portfolio level 5)
+RWS-31160061,investment_planning,1.0,2,proof of concept on six gates before rollout is a stage gate
+RWS-31160061,procurement_commercial,2.0,3,competitive dialogue plus modification
+RWS-31160061,controls_assurance,2.0,4,phased rollout of 130 installations across piers of an operating barrier
+RWS-31160061,asset_lifecycle,2.5,4,renewal of 130 hydraulic installations for a 25-year life on a national barrier
+RWS-31166516,procurement_commercial,2.0,3,competitive dialogue design-and-build plus modification
+RWS-31166516,controls_assurance,2.5,4,movable bridges + ramps + embankments + traffic management within the Zuidasdok programme
+RWS-31167770,investment_planning,2.0,3,bridging strategy to 2035 pending full replacement is a replace-or-extend decision
+RWS-31167770,controls_assurance,2.0,3,about fifty measures across four weirs on a navigated river
+RWS-31167987,procurement_commercial,2.0,3,competitive dialogue plus modification
+RWS-31167987,controls_assurance,3.0,4,two movable bridges: E/M/control systems and CE marking under road and shipping traffic
+RWS-31167987,asset_lifecycle,3.0,4,renewal of critical movable-bridge installations
+RWS-31169958,controls_assurance,2.0,4,lock + movable bridge + control building renovated in phases to limit closures
+RWS-31169958,asset_lifecycle,3.5,4,renovation with maintenance of a lock complex
+RWS-31181244,controls_assurance,2.0,3,80 measures at 40 sites against the EU Water Framework Directive 2027 deadline
+RWS-31186549,procurement_commercial,2.0,3,competitive dialogue repeat order under a tunnel portfolio
+RWS-31186549,controls_assurance,3.0,5,near-total installation renewal incl. 3B systems while the tunnel stays open; portfolio context; maintenance to 2039
+RWS-31193090,controls_assurance,1.0,3,movable bridge control installation renewal under road and shipping traffic; modification
+RWS-31193090,asset_lifecycle,2.5,3,renovation of movable parts and control installation
+RWS-31194052,investment_planning,1.0,2,part of the RWS renewal programme (vernieuwingsopgave)
+RWS-31194052,procurement_commercial,2.0,3,competitive dialogue
+RWS-31194052,controls_assurance,3.0,4,multi-discipline renewal 2027-2032 of a bridge in use
+RWS-31194052,asset_lifecycle,2.0,4,renewal of a critical movable bridge
+RWS-31197126,procurement_commercial,2.5,3,competitive dialogue portfolio framework
+RWS-31197126,controls_assurance,1.5,3,multiple complex sizable bridges under one framework
+RWS-31197126,asset_lifecycle,2.0,4,portfolio maintenance of a class of steel bridges
+RWS-31197722,controls_assurance,1.5,2.5,fifteen measures along the Meuse
+RWS-31203739,asset_lifecycle,2.5,3,preservation of a nationally critical barrier
+RWS-31204979,asset_lifecycle,2.5,4,performance-based maintenance of a sunken road section with tunnel installations
+RWS-31205571,procurement_commercial,2.0,3,one of four coordinated contracts awarded by competitive dialogue
+RWS-31205571,controls_assurance,3.0,5,multi-contract bridge renewal programme with yard and other-contractor interfaces; heavy lifting
+RWS-31205571,asset_lifecycle,2.0,3,renewal and reuse of existing bridge arches
+RWS-31208914,procurement_commercial,1.5,2.5,negotiated award without prior call
+RWS-31208914,controls_assurance,1.5,3,renovation of movement works on an operating barrier 2027-2030
+RWS-31208914,asset_lifecycle,2.5,4,renovation of barrier movement works with options
+RWS-31211853,procurement_commercial,1.5,2.5,eleven-year negotiated award without prior call (vendor dependency)
+RWS-31211853,controls_assurance,1.5,2.5,control-system life extension on a critical barrier
+RWS-31212908,controls_assurance,1.0,2.5,lighting replacement in a live motorway tunnel
+gem crailo b v|aanbesteding future grid crailo openbare delen,investment_planning,1.0,2,all-electric energy concept on a former defence site
+gem crailo b v|aanbesteding future grid crailo openbare delen,procurement_commercial,2.0,3,DBMO with handover of ownership to a local energy community
+gemeente almere|maatregelen galjoottocht,controls_assurance,1.5,2.5,several measures with a subsidy-linked deadline
+gemeente amstelveen|projectcoordinator kabels en leidingen legmeer schaal orv26 1673,controls_assurance,2.0,3,role is utility interface/risk/planning coordination (controls-type advisory)
+gemeente amsterdam ingenieursbureau|ai 2026 0008 uitvoerder geothermie amsterdam amstelveen 1,investment_planning,1.0,2,geothermal concession with subsurface and demand risk
+gemeente amsterdam ingenieursbureau|ai 2026 0008 uitvoerder geothermie amsterdam amstelveen 1,procurement_commercial,3.0,4,works concession by competitive dialogue
+gemeente amsterdam uitvoeringsorganisatie infrastructuur en energie|renovatie amsterdam arenatunnel,procurement_commercial,2.0,3,competitive dialogue
+gemeente amsterdam uitvoeringsorganisatie infrastructuur en energie|renovatie amsterdam arenatunnel,controls_assurance,1.5,4,most installations replaced in a live tunnel 2026-2032
+gemeente amsterdam uitvoeringsorganisatie infrastructuur en energie|renovatie amsterdam arenatunnel,asset_lifecycle,2.5,4,condition-survey-driven renewal of a critical tunnel
+gemeente arnhem|raamovereenkomst adviesdiensten energiesystemen,investment_planning,3.5,4,advisory lots on integrated energy systems and heat networks
+gemeente delft|raamovereenkomst levering en plaatsing delftse standaardbruggen,asset_lifecycle,2.0,3,standardised replacement programme for outdated bridges
+gemeente ede|globale visuele weginspectie,asset_lifecycle,2.0,3,network condition inspection
+gemeente eindhoven|hov4 kruising ring karel de grotelaan,procurement_commercial,2.0,3,bouwteam
+gemeente eindhoven|hov4 kruising ring karel de grotelaan,controls_assurance,1.0,3,ring-road underpass under live traffic 2027-2030
+gemeente enschede|bouwteam het lang,controls_assurance,2.5,3.5,coordination of heat network gas electricity and water works with housing renovation
+gemeente gooise meren|uitnodiging informatiebijeenkomst programma muiderberg op 29 juni 09 00,investment_planning,2.5,3,six-subproject programme combined with a heat network
+gemeente gooise meren|uitnodiging informatiebijeenkomst programma muiderberg op 29 juni 09 00,procurement_commercial,1.0,2.5,bundled tender of street works with heat-network construction
+gemeente gooise meren|uitnodiging informatiebijeenkomst programma muiderberg op 29 juni 09 00,controls_assurance,1.0,3,interfaces between street renewal and heat-network works across subprojects
+gemeente groningen afdeling stadsingenieurs|113 2025 raw raamovereenkomst baggeren groningen 2026 2032,asset_lifecycle,1.0,2,routine dredging
+gemeente leiden|a08 393 levensduur verlengend onderhoud kademuren leiden,procurement_commercial,2.5,3,framework with bouwteam design call-offs per cluster
+gemeente leiden|a08 393 levensduur verlengend onderhoud kademuren leiden,controls_assurance,1.5,3,3-8 sites a year in a historic city centre
+gemeente leiden|a08 393 levensduur verlengend onderhoud kademuren leiden,asset_lifecycle,4.5,5,portfolio-level life extension of the city quay-wall stock
+gemeente maassluis|bouwteam vervangen koepaardbrug,controls_assurance,1.0,2.5,movable bridge with traffic control installation
+gemeente opsterland|onderhoud beweegbare kunstwerken,asset_lifecycle,2.5,3.5,maintenance and installation-manager role for 18 movable bridges
+gemeente rotterdam|1 w 0070353 26 renovatie jan kuitenbrug te rotterdam nl,controls_assurance,1.0,2.5,city-centre movable bridge renovation incl. controls
+gemeente rotterdam|1 w 0070353 26 renovatie jan kuitenbrug te rotterdam nl,asset_lifecycle,2.0,3,renovation of a movable bridge
+gemeente rotterdam|warmtekoudesysteem merwehaven,investment_planning,1.0,3,collective energy system for an area development under concession
+gemeente rotterdam|warmtekoudesysteem merwehaven,procurement_commercial,3.0,4,bouwteam concession
+gemeente tilburg|flankerende maatregelen netwerkanalyse,procurement_commercial,2.5,4,terminated twice in 2026 and re-tendered: evidenced procurement difficulty
+gemeente tilburg|marktconsultatie onderhoud sloten en duikers,asset_lifecycle,3.0,4,backlog plus inventory and management plan for 345 km of watercourses
+gemeente zwijndrecht|260068gzd d t keermuren en beschoeiing,controls_assurance,1.0,2.5,site management and supervision services
+gvb infra b v|cbi centrale bediening installaties,controls_assurance,1.0,2.5,system-critical control platform for the transit network
+gvb infra b v|cbi centrale bediening installaties,asset_lifecycle,2.5,3.5,lifecycle of the central operating system for tunnels track stations and traction
+gvb infra b v|raamovereenkomsten programma grootschalige vervanging gelijkrichterstations tram en metro gvb amsterdam,investment_planning,1.5,2,programme of 44 substations
+gvb infra b v|raamovereenkomsten programma grootschalige vervanging gelijkrichterstations tram en metro gvb amsterdam,procurement_commercial,2.5,3,two-lot programme frameworks with build teams
+gvb infra b v|raamovereenkomsten programma grootschalige vervanging gelijkrichterstations tram en metro gvb amsterdam,controls_assurance,1.5,4,programme replacing 44 traction substations under live tram and metro operation
+gvb infra b v|raamovereenkomsten programma grootschalige vervanging gelijkrichterstations tram en metro gvb amsterdam,asset_lifecycle,2.5,4,large-scale replacement of traction power assets
+hoogheemraadschap van delfland|project waterzuivering vergulde hand,investment_planning,1.5,2.5,replacement of an end-of-life WWTP at a new site
+hoogheemraadschap van delfland|project waterzuivering vergulde hand,procurement_commercial,2.0,3,integral design-and-build by competitive dialogue
+hoogheemraadschap van delfland|project waterzuivering vergulde hand,controls_assurance,3.0,4,all disciplines; new plant must take over from an operating plant; 2027-2033
+hoogheemraadschap van delfland|project waterzuivering vergulde hand,asset_lifecycle,2.0,3,replacement of an end-of-life asset
+hoogheemraadschap van delfland|vaartweg zuid waterkering,procurement_commercial,2.0,3,two-phase bouwteam (DG2025) then UAV 2012
+hoogheemraadschap van delfland|vaartweg zuid waterkering,controls_assurance,2.0,3,tight space; houseboats; utility crossings; protection of old homes
+n v hvc|hvc warmtenetten erkenningsregeling engineering en ingenieursbureaus marktconsultatie,procurement_commercial,1.5,3.5,redesign of the engineering supply-chain scheme for scaling heat networks
+n v hvc|hvc warmtenetten erkenningsregeling inpandige werkzaamheden marktconsultatie,procurement_commercial,1.5,3.5,redesign of the in-building works supply-chain scheme
+n v hvc|hvc warmtenetten erkenningsregeling ondergrondse werkzaamheden marktconsulatie,procurement_commercial,1.5,3.5,redesign of the underground works supply-chain scheme
+n v hvc|wnw warmtenetten rok 2026 engineering,procurement_commercial,2.0,3,three engineering frameworks with a 15 million EUR ceiling
+n v nederlandse gasunie|integration consultant concept select,investment_planning,4.0,5,concept selection for the national hydrogen transport network
+n v nederlandse gasunie|integration consultant concept select,procurement_commercial,1.0,2,single consultant-team appointment
+n v nederlandse gasunie|integration consultant concept select,controls_assurance,1.0,3,integration role with project-management advice in the CPV scope
+netverder b v|marktconsultatie aannemersstrategie warmtenetten,investment_planning,1.5,3.5,growth phasing for rapidly scaling heat networks
+netverder b v|marktconsultatie aannemersstrategie warmtenetten,procurement_commercial,2.5,5,contractor-market strategy (collaboration models scope demarcation risk) for a scaling sector
+netverder b v|marktconsultatie aannemersstrategie warmtenetten,controls_assurance,1.0,2.5,standardisation and project-risk management at scale
+nrg pallas|programme integration manager,investment_planning,1.5,2,nuclear reactor programme
+nrg pallas|programme integration manager,controls_assurance,3.0,5,integrated schedule risk issue and cost registers across three projects explicitly procured
+prorail b v|ertms onderzoek ertms readiness goederenmaterieel,investment_planning,1.0,3,data-driven readiness forecasting informing ERTMS rollout timing
+prorail b v|gebied zuid holland realisatie groot onderhoud 4 bruggen,controls_assurance,1.0,2.5,four rail bridges requiring track possessions
+prorail b v|gebied zuid holland realisatie groot onderhoud 4 bruggen,asset_lifecycle,2.0,3,major maintenance of four rail bridges
+provincie flevoland|23150 10 rondweg lelystad zuid,investment_planning,1.0,2,jointly funded municipal and provincial sections
+provincie flevoland|23150 10 rondweg lelystad zuid,procurement_commercial,2.0,3,UAV-GC design-and-construct for two co-clients
+provincie flevoland|23150 10 rondweg lelystad zuid,controls_assurance,1.0,3,ring road with viaduct for two clients 2027-2030
+provincie limburg|bouwteam reconstructie provinciale wegen n278 en n598,procurement_commercial,2.0,3,bouwteam with client engineering bureau
+provincie limburg|bouwteam reconstructie provinciale wegen n278 en n598,controls_assurance,2.0,3,utility coordination; integrated planning; unexploded ordnance; fauna measures
+provincie limburg|marktconsultatie n595 wittemer allee,investment_planning,4.5,4,pre-design consultation with an uncertain second phase (rubric 4)
+provincie limburg|marktconsultatie n595 wittemer allee,procurement_commercial,2.5,3.5,feedback sought on contracting risk allocation and pricing
+provincie limburg|raamovereenkomst ingenieursadviesdiensten wrl,investment_planning,3.5,3,engineering framework whose scope is only in the tender guide
+provincie limburg|raamovereenkomst ingenieursadviesdiensten wrl,controls_assurance,1.0,2,cost calculation and cost-control services in CPV scope
+provincie limburg|reconstructie n598 de hut de plank,investment_planning,1.0,2.5,scope reopened by changed water ecology and boundary requirements
+provincie limburg|reconstructie n598 de hut de plank,procurement_commercial,2.0,4,tender cancelled for redesign; re-procurement needed
+provincie noord brabant|ondersteuning windproject de pielis bergeijk,investment_planning,2.5,3,support through preferred-decision and project-decision stages
+provincie overijssel|groot onderhoud kunstwerken e w,asset_lifecycle,2.5,4,portfolio maintenance of E&M installations of provincial bridges and locks
+provincie overijssel|groot onderhoud vaarwegen nw overijssel 2026 2032,asset_lifecycle,3.0,4,multi-year maintenance plan built from inspection findings
+provincie overijssel|marktconsultatie groot onderhoud kunstwerken civiel,procurement_commercial,1.5,2.5,consultation on a new portfolio framework
+provincie overijssel|marktconsultatie groot onderhoud kunstwerken civiel,asset_lifecycle,3.0,4,portfolio civil maintenance of provincial structures
+provincie utrecht|planvorming utrechtse beekherstelprojecten gelderse vallei,investment_planning,1.0,3,integrated planning across several brook-restoration projects
+provincie zuid holland|baggeren vaarwegtraject t10 merwedekanaal en verwerking bagger in weilanddepot,procurement_commercial,1.5,2.5,re-noticed with a two-lot structure and direct award of lot 2
+provincie zuid holland|dos 2022 0003656 bouwteam hov busbaan leiden katwijk,controls_assurance,1.0,3,busway integrated with area development a square and a viaduct
+r e t n v|marktconsultatie versterking tractie energievoorziening metro ret,investment_planning,2.0,3,capacity investment tied to timetable increases in 2030 and 2032
+r e t n v|marktconsultatie versterking tractie energievoorziening metro ret,procurement_commercial,1.5,2.5,several European tenders being prepared
+r e t n v|marktconsultatie versterking tractie energievoorziening metro ret,controls_assurance,1.5,3.5,deadline-driven substation reinforcement under live metro operation
+r e t n v|marktconsultatie versterking tractie energievoorziening metro ret,asset_lifecycle,1.5,2.5,reinforcement of existing traction power assets
+r e t n v|p 25 037 capaciteitsverhoging emplacement waalhaven oost fase 1 en 2a,investment_planning,1.5,2.5,capacity expansion for new vehicles within Metronet
+r e t n v|p 25 037 capaciteitsverhoging emplacement waalhaven oost fase 1 en 2a,controls_assurance,1.5,3.5,phased works in an operating metro yard within a programme
+r e t n v|p 25 037 capaciteitsverhoging emplacement waalhaven oost fase 1 en 2a,asset_lifecycle,2.0,3,renewal of a 1974 workshop and yard
+rijksvastgoedbedrijf|29183 baanrenovatie vliegbasis eindhoven,procurement_commercial,2.0,3,competitive dialogue
+rijksvastgoedbedrijf|29183 baanrenovatie vliegbasis eindhoven,controls_assurance,2.5,4,operational military air base; civil + E&I + ILS + arresting system; fixed 2027 window
+rijksvastgoedbedrijf|29183 baanrenovatie vliegbasis eindhoven,asset_lifecycle,2.0,3,major runway overhaul
+rijksvastgoedbedrijf|34723 vernieuwen middenspanningsnet vliegbasis te eindhoven,controls_assurance,2.0,3,MV network renewal at an operational air base
+rijksvastgoedbedrijf|34723 vernieuwen middenspanningsnet vliegbasis te eindhoven,asset_lifecycle,2.5,3,renewal of base power distribution
+schiphol nederland b v|amsterdam airport schiphol ams c pier new build integrated designer,investment_planning,2.0,3,major airport pier at strategy stage
+schiphol nederland b v|amsterdam airport schiphol ams c pier new build integrated designer,procurement_commercial,2.5,4,consultation on procurement contracting and delivery strategy (designer + contractor tenders)
+schiphol nederland b v|amsterdam airport schiphol ams c pier new build integrated designer,controls_assurance,1.0,3,new build inside an operating airport with separate designer and contractor
+stadswerk 072 n v|bouwteam reconstructie kruising n9 kogendijk helderseweg te alkmaar,controls_assurance,1.0,3,junction rebuild with tunnel under live traffic
+stichting waternet|contractering voor een enkelvoudige raamovereenkomst voor de realisatie van 3 defosfateringsinstallaties,procurement_commercial,1.5,2.5,single framework for three installations with advisory component
+stichting waternet|contractering voor een enkelvoudige raamovereenkomst voor de realisatie van 3 defosfateringsinstallaties,controls_assurance,1.5,2.5,three sites under the river basin programme
+tennet tso b v|contractwijziging raamovereenkomst eu 301 lijnen negometrix 190342 en 197070,investment_planning,1.0,2.5,grid expansion volume exceeds framework ceiling
+tennet tso b v|contractwijziging raamovereenkomst eu 301 lijnen negometrix 190342 en 197070,procurement_commercial,2.0,4,material ceiling increase (+79.3 million EUR on 200 million)
+tennet tso b v|contractwijziging raamovereenkomst eu 302 civiele werken kabelverbindingen negometrix 194150,investment_planning,1.0,3,grid-expansion volume growth forces a 600 million EUR ceiling increase
+tennet tso b v|contractwijziging raamovereenkomst eu 302 civiele werken kabelverbindingen negometrix 194150,procurement_commercial,2.0,5,ceiling raised by 600 million EUR on a national framework (commercial and legal headroom question)
+tennet tso b v|contractwijziging raamovereenkomst eu 302 civiele werken kabelverbindingen negometrix 194150,controls_assurance,1.0,3,national programme of onshore cable connections
+tennet tso b v|erkenningsregeling eu 401 lijnen qualification system eu 401 overhead lines,investment_planning,1.0,2.5,qualification system sized for grid expansion
+tennet tso b v|erkenningsregeling eu 401 lijnen qualification system eu 401 overhead lines,procurement_commercial,1.5,3.5,new qualification system replacing EU-301 (supply-chain strategy)
+tennet tso b v|erkenningsregeling eu 402 cables qualification system eu 402 civil works onshore cable connections,investment_planning,1.5,2.5,qualification system sized for grid expansion
+tennet tso b v|erkenningsregeling eu 402 cables qualification system eu 402 civil works onshore cable connections,procurement_commercial,1.5,3.5,new qualification system for cable works (supply-chain strategy)
+tennet tso b v|project innovation maintain the grid,asset_lifecycle,3.0,4,data-driven inspection to cut planned outages (asset-management innovation)
+utilityconnect b v|leveren en plaatsen van meterkasten en regievoering op de realisatie van e aansluitingen utility connect,controls_assurance,2.0,3,managing realisation of connections in coordination with network operators
+warmtestad bv|erkenningsregeling aanleg warmtenetten,procurement_commercial,2.5,3,termination of the construction scheme changes the supply strategy
+waterschap aa en maas|marktconsultatie optimalisatie waterberging engelermeer,procurement_commercial,2.5,3.5,views sought on contracting tendering phasing and realisation
+waterschap aa en maas|marktconsultatie optimalisatie waterberging engelermeer,controls_assurance,1.5,2.5,storage basin + dikes + movable weirs + underpass
+waterschap aa en maas|vooraankondiging eu aanbesteding bouwteam kadeherstel de brand te s hertogenbosch,procurement_commercial,2.5,3,bouwteam
+waterschap aa en maas|vooraankondiging eu aanbesteding bouwteam kadeherstel de brand te s hertogenbosch,controls_assurance,1.0,2.5,multi-scope quay and regional flood defence works
+waterschap aa en maas|vooraankondiging eu aanbesteding bouwteam kadeherstel de brand te s hertogenbosch,asset_lifecycle,2.5,3.5,major maintenance of quays that are regional flood defences
+waterschap brabantse delta|demo installatie vivimag,investment_planning,1.0,2.5,demonstrator to inform a scaling decision on phosphate recovery
+waterschap hollandse delta|raamovereenkomst onderhoud waterkeringen 2027 2032,asset_lifecycle,3.5,4.5,maintenance of about 6000 km of flood defences with asset data in GIS
+waterschap rivierenland|contractvoorbereiding onderdoorgang merwede linge spoorlijn,investment_planning,1.0,2,transition from study to tender dossier
+waterschap rivierenland|contractvoorbereiding onderdoorgang merwede linge spoorlijn,procurement_commercial,1.5,3,contract preparation for alliance (TunnelAlliantie) contracting
+waterschap vallei en veluwe|realisatie rwzi bennekom,investment_planning,1.0,2,new WWTP and storage basin
+waterschap vallei en veluwe|realisatie rwzi bennekom,procurement_commercial,2.0,3,bouwteam plus separate realisation agreements
+waterschap vallei en veluwe|realisatie rwzi bennekom,controls_assurance,1.5,3,new plant and basin 2026-2031
+wetterskip fryslan|marktinformatiebijeenkomst hwbp project dijkversterking de groene dijk wetterskip fryslan,investment_planning,2.0,3,HWBP dike reinforcement at pre-tender stage
+wetterskip fryslan|marktinformatiebijeenkomst hwbp project dijkversterking de groene dijk wetterskip fryslan,procurement_commercial,2.5,3.5,procurement set-up and planning under market consultation
+wetterskip fryslan|marktinformatiebijeenkomst hwbp project dijkversterking de groene dijk wetterskip fryslan,controls_assurance,1.0,2.5,multi-year dike reinforcement
+wetterskip fryslan|marktinformatiebijeenkomst hwbp project dijkversterking de groene dijk wetterskip fryslan,asset_lifecycle,1.5,3,reinforcement of a primary flood defence

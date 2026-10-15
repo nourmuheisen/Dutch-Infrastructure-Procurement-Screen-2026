@@ -1,0 +1,47 @@
+{
+  "validated_notices": 26,
+  "title_match_rate": 1.0,
+  "authority_match_rate": 1.0,
+  "notice_type_consistency_rate": 1.0,
+  "cpv_main_match_rate": 1.0,
+  "nuts_checks": {
+    "match": 14,
+    "n/a (pipeline national)": 11,
+    "n/a (PDF gives place name only)": 1
+  },
+  "pub_date_diff_days": {
+    "0.0": 16,
+    "1.0": 7,
+    "2.0": 2,
+    "NaN": 1
+  },
+  "pdf_values_recovered": 14,
+  "pdf_value_placeholders": 6,
+  "rule_review_agreement_overall": 0.745,
+  "rule_review_by_capability": {
+    "investment_planning": {
+      "unchanged": 150,
+      "raised": 31,
+      "lowered": 2,
+      "mean_abs_change": 0.2
+    },
+    "procurement_commercial": {
+      "unchanged": 131,
+      "raised": 52,
+      "lowered": 0,
+      "mean_abs_change": 0.36
+    },
+    "controls_assurance": {
+      "unchanged": 124,
+      "raised": 58,
+      "lowered": 1,
+      "mean_abs_change": 0.51
+    },
+    "asset_lifecycle": {
+      "unchanged": 140,
+      "raised": 42,
+      "lowered": 1,
+      "mean_abs_change": 0.24
+    }
+  }
+}
