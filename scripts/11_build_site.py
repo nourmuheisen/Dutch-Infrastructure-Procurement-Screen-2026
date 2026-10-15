@@ -25,6 +25,10 @@ css = "".join(
 src = re.sub(r'<link rel="preconnect"[^>]*>\n', "", src)
 src = re.sub(r'<link rel="stylesheet" href="https://fonts.googleapis.com[^>]*>\n', "", src)
 src = src.replace("<style>", "<style>" + css + "\n", 1)
+# favicon: the SVG is inlined so the single file shows it anywhere; .ico and touch icon sit next to index.html
+import shutil, urllib.parse
+svg = (SITE / "icons" / "favicon.svg").read_text().strip()
+src = src.replace("__FAVICON_SVG__", "data:image/svg+xml," + urllib.parse.quote(svg))
 page = src.replace("__DATA__", data)
 head, _, rest = page.partition("</style>")
 doc = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
@@ -33,4 +37,6 @@ doc = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
 DOCS = ROOT / "docs"
 DOCS.mkdir(exist_ok=True)
 (DOCS / "index.html").write_text(doc)  # GitHub Pages serves /docs
+for f in ("favicon.ico", "apple-touch-icon.png", "favicon.svg"):
+    shutil.copy(SITE / "icons" / f, DOCS / f)
 print("built", round(len(doc) / 1024), "KB")
