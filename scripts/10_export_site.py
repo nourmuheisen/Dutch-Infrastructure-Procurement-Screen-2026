@@ -100,7 +100,7 @@ validation = []
 vx = vx.set_index("notice_id")
 for _, r in val.iterrows():
     x = vx.loc[r.notice_id]
-    validation.append({"id": r.notice_id, "sample": r["sample"], "title": r.title,
+    validation.append({"id": r.notice_id, "sample": x.loc["sample"], "title": r.title,
                        "titleSim": f(r.title_similarity), "titleOk": r.title_ok == "True",
                        "authOk": r.authority_ok == "True", "typeOk": r.notice_type_ok == "True",
                        "cpvOk": r.cpv_main_ok == "True", "nuts": r.nuts_check,

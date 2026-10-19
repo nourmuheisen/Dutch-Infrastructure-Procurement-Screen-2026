@@ -63,7 +63,7 @@ for _, r in v.iterrows():
         nuts_ok = "match" if (pipe_nuts & pdf_nuts or any(pn.startswith(pp) or pp.startswith(pn) for pn in pdf_nuts for pp in pipe_nuts)) else "MISMATCH"
     val = float(r.pdf_value_eur) if r.pdf_value_eur else None
     rows.append({
-        "notice_id": r.notice_id, "sample": r.sample, "title": x.title,
+        "notice_id": r.notice_id, "sample": r.loc["sample"], "title": x.title,
         "title_similarity": round(title_sim, 3), "title_ok": title_sim >= 0.9,
         "authority_ok": auth_ok, "pub_date_diff_days": date_diff,
         "notice_type_ok": type_ok, "cpv_main_ok": cpv_ok, "nuts_check": nuts_ok,
